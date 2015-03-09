@@ -228,22 +228,6 @@ class ViewController: UIViewController, UITextViewDelegate, UINavigationControll
         //Use textView
        let myarray = Array(textView.text)
         
-//        var rows = 11
-//        var columns = 10
-//        
-//        var column0 = [Character]()
-//        var column1 = [Character]()
-//        var column2 = [Character]()
-//        var column3 = [Character]()
-//        var column4 = [Character]()
-//        var column5 = [Character]()
-//        var column6 = [Character]()
-//        var column7 = [Character]()
-//        var column8 = [Character]()
-//        var column9 = [Character]()
-//        var column10 = [Character]()
-        
-        
         
         var tempcolumn = [Character]()
         
