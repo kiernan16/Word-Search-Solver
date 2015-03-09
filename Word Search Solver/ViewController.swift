@@ -9,6 +9,13 @@
 import UIKit
 import Foundation
 
+var rows = 11
+var columns = 10
+var x = 0
+var TempWord : String = ""
+var WordBank1 = "Buffalo"
+var array2D = Array<Array<String>>()
+
 class ViewController: UIViewController, UITextViewDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var findTextField: UITextField!
@@ -28,37 +35,48 @@ class ViewController: UIViewController, UITextViewDelegate, UINavigationControll
     var wordbank8 = []
     var wordbank9 = []
     var wordbank10 = []
+    var wordbank11 = []
+    var wordbank12 = []
     
-    var rows = 11
-    var columns = 10
+   // var rows = 11   ///////
+ //   var columns = 10    ///////////
+ //   var x = 0
     
-    var column0 = [Character]()
-    var column1 = [Character]()
-    var column2 = [Character]()
-    var column3 = [Character]()
-    var column4 = [Character]()
-    var column5 = [Character]()
-    var column6 = [Character]()
-    var column7 = [Character]()
-    var column8 = [Character]()
-    var column9 = [Character]()
-    var column10 = [Character]()
+ //   var TempWord : String = ""
+ //   var WordBank1 = "Buffalo"
     
-    var newrow0 = [Character]()
-    var newrow1 = [Character]()
-    var newrow2 = [Character]()
-    var newrow3 = [Character]()
-    var newrow4 = [Character]()
-    var newrow5 = [Character]()
-    var newrow6 = [Character]()
-    var newrow7 = [Character]()
-    var newrow8 = [Character]()
-    var newrow9 = [Character]()
-    var newrow10 = [Character]()
+    let letters: String = "ELIGHTNINGFERTNBUFFALOCKEABKELINBEFWLRBUOESUKSTREIIWGFOABSAROKEOSFLFEUINAVLKFNUNBFIFABCLHMONSTERAOUTHUNDERBIRD"
+    
+    func SetArray(){
+        let myarray = Array(letters)
 
+    
+        WordBank1 = WordBank1.uppercaseString
+        var Word1 = Array(WordBank1)
+    
+    
+    
+  //      var array2D = Array<Array<String>>()
+        for col in 0..<rows {
+            array2D.append(Array(count: columns, repeatedValue:""))
+        }
+    
+    
+    
+    
+        for(var i=0; i<columns; i++){
+            for(var y=rows-1; y>=0; y--){
+                array2D[y][i].append(myarray[myarray.count-1-x])
+                x++
+            }
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        SetArray()
     }
 
     override func didReceiveMemoryWarning() {
@@ -224,387 +242,6 @@ class ViewController: UIViewController, UITextViewDelegate, UINavigationControll
     
     */
     
-    func AssignArrays(){
-        //Use textView
-       let myarray = Array(textView.text)
-        
-       // stuff should be here
-        var tempcolumn = [Character]()
-        
-        var x : Int = 0
-        var y = 0
-        
-        while x < myarray.count{
-            switch(y){
-            case 0:
-                for (var i = 0; i<rows; i++){
-                    column0.insert(myarray[myarray.count-1-x], atIndex: i)
-                    x++
-                    if i==rows-1{
-                        for (var j = 0; j<rows; j++){
-                            tempcolumn.insert(column0[column0.count-1-j], atIndex: j)
-                            if j==rows-1{
-                                column0=tempcolumn
-                                y++
-                                tempcolumn = []
-                            }
-                        }
-                    }
-                }
-                break
-                
-            case 1:
-                for (var i = 0; i<rows; i++){
-                    column1.insert(myarray[myarray.count-1-x], atIndex: i)
-                    x++
-                    if i==rows-1{
-                        for (var j = 0; j<rows; j++){
-                            tempcolumn.insert(column1[column1.count-1-j], atIndex: j)
-                            if j==rows-1{
-                                column1=tempcolumn
-                                y++
-                                tempcolumn = []
-                            }
-                        }
-                    }
-                }
-                break
-            case 2:
-                for (var i = 0; i<rows; i++){
-                    column2.insert(myarray[myarray.count-1-x], atIndex: i)
-                    x++
-                    if i==rows-1{
-                        for (var j = 0; j<rows; j++){
-                            tempcolumn.insert(column2[column2.count-1-j], atIndex: j)
-                            if j==rows-1{
-                                column2=tempcolumn
-                                y++
-                                tempcolumn = []
-                            }
-                        }
-                    }
-                }
-                break
-            case 3:
-                for (var i = 0; i<rows; i++){
-                    column3.insert(myarray[myarray.count-1-x], atIndex: i)
-                    x++
-                    if i==rows-1{
-                        for (var j = 0; j<rows; j++){
-                            tempcolumn.insert(column3[column3.count-1-j], atIndex: j)
-                            if j==rows-1{
-                                column3=tempcolumn
-                                y++
-                                tempcolumn = []
-                            }
-                        }
-                    }
-                }
-                break
-            case 4:
-                for (var i = 0; i<rows; i++){
-                    column4.insert(myarray[myarray.count-1-x], atIndex: i)
-                    x++
-                    if i==rows-1{
-                        for (var j = 0; j<rows; j++){
-                            tempcolumn.insert(column4[column4.count-1-j], atIndex: j)
-                            if j==rows-1{
-                                column4=tempcolumn
-                                y++
-                                tempcolumn = []
-                            }
-                        }
-                    }
-                }
-                break
-            case 5:
-                for (var i = 0; i<rows; i++){
-                    column5.insert(myarray[myarray.count-1-x], atIndex: i)
-                    x++
-                    if i==rows-1{
-                        for (var j = 0; j<rows; j++){
-                            tempcolumn.insert(column5[column5.count-1-j], atIndex: j)
-                            if j==rows-1{
-                                column5=tempcolumn
-                                y++
-                                tempcolumn = []
-                            }
-                        }
-                    }
-                }
-                break
-            case 6:
-                for (var i = 0; i<rows; i++){
-                    column6.insert(myarray[myarray.count-1-x], atIndex: i)
-                    x++
-                    if i==rows-1{
-                        for (var j = 0; j<rows; j++){
-                            tempcolumn.insert(column6[column6.count-1-j], atIndex: j)
-                            if j==rows-1{
-                                column6=tempcolumn
-                                y++
-                                tempcolumn = []
-                            }
-                        }
-                    }
-                }
-                break
-            case 7:
-                for (var i = 0; i<rows; i++){
-                    column7.insert(myarray[myarray.count-1-x], atIndex: i)
-                    x++
-                    if i==rows-1{
-                        for (var j = 0; j<rows; j++){
-                            tempcolumn.insert(column7[column7.count-1-j], atIndex: j)
-                            if j==rows-1{
-                                column7=tempcolumn
-                                y++
-                                tempcolumn = []
-                            }
-                        }
-                    }
-                }
-                break
-            case 8:
-                for (var i = 0; i<rows; i++){
-                    column8.insert(myarray[myarray.count-1-x], atIndex: i)
-                    x++
-                    if i==rows-1{
-                        for (var j = 0; j<rows; j++){
-                            tempcolumn.insert(column8[column8.count-1-j], atIndex: j)
-                            if j==rows-1{
-                                column8=tempcolumn
-                                y++
-                                tempcolumn = []
-                            }
-                        }
-                    }
-                }
-                break
-            case 9:
-                for (var i = 0; i<rows; i++){
-                    column9.insert(myarray[myarray.count-1-x], atIndex: i)
-                    x++
-                    if i==rows-1{
-                        for (var j = 0; j<rows; j++){
-                            tempcolumn.insert(column9[column9.count-1-j], atIndex: j)
-                            if j==rows-1{
-                                column9=tempcolumn
-                                y++
-                                tempcolumn = []
-                            }
-                        }
-                    }
-                }
-                break
-            case 10:
-                for (var i = 0; i<rows; i++){
-                    column10.insert(myarray[myarray.count-1-x], atIndex: i)
-                    x++
-                    if i==rows-1{
-                        for (var j = 0; j<rows; j++){
-                            tempcolumn.insert(column10[column10.count-1-j], atIndex: j)
-                            if j==rows-1{
-                                column10=tempcolumn
-                                y++
-                                tempcolumn = []
-                            }
-                        }
-                    }
-                }
-                break
-            default: break
-            }
-        }
-        
-        
-        println(column0)
-        println(column1)
-        println(column2)
-        println(column3)
-        println(column4)
-        println(column5)
-        println(column6)
-        println(column7)
-        println(column8)
-        println(column9)
-        
-        tempcolumn = []
-        
-// stuff should be here
-        
-        
-        
-        
-        
-        func SetNewRow0(){
-            var z = 0
-            newrow0.append(column0[z])
-            newrow0.append(column1[z])
-            newrow0.append(column2[z])
-            newrow0.append(column3[z])
-            newrow0.append(column4[z])
-            newrow0.append(column5[z])
-            newrow0.append(column6[z])
-            newrow0.append(column7[z])
-            newrow0.append(column8[z])
-            newrow0.append(column9[z])
-        }
-        
-        func SetNewRow1(){
-            var z = 1
-            newrow1.append(column0[z])
-            newrow1.append(column1[z])
-            newrow1.append(column2[z])
-            newrow1.append(column3[z])
-            newrow1.append(column4[z])
-            newrow1.append(column5[z])
-            newrow1.append(column6[z])
-            newrow1.append(column7[z])
-            newrow1.append(column8[z])
-            newrow1.append(column9[z])
-        }
-        
-        func SetNewRow2(){
-            var z = 2
-            newrow2.append(column0[z])
-            newrow2.append(column1[z])
-            newrow2.append(column2[z])
-            newrow2.append(column3[z])
-            newrow2.append(column4[z])
-            newrow2.append(column5[z])
-            newrow2.append(column6[z])
-            newrow2.append(column7[z])
-            newrow2.append(column8[z])
-            newrow2.append(column9[z])
-        }
-        
-        func SetNewRow3(){
-            var z = 3
-            newrow3.append(column0[z])
-            newrow3.append(column1[z])
-            newrow3.append(column2[z])
-            newrow3.append(column3[z])
-            newrow3.append(column4[z])
-            newrow3.append(column5[z])
-            newrow3.append(column6[z])
-            newrow3.append(column7[z])
-            newrow3.append(column8[z])
-            newrow3.append(column9[z])
-        }
-        
-        func SetNewRow4(){
-            var z = 4
-            newrow4.append(column0[z])
-            newrow4.append(column1[z])
-            newrow4.append(column2[z])
-            newrow4.append(column3[z])
-            newrow4.append(column4[z])
-            newrow4.append(column5[z])
-            newrow4.append(column6[z])
-            newrow4.append(column7[z])
-            newrow4.append(column8[z])
-            newrow4.append(column9[z])
-        }
-        
-        func SetNewRow5(){
-            var z = 5
-            newrow5.append(column0[z])
-            newrow5.append(column1[z])
-            newrow5.append(column2[z])
-            newrow5.append(column3[z])
-            newrow5.append(column4[z])
-            newrow5.append(column5[z])
-            newrow5.append(column6[z])
-            newrow5.append(column7[z])
-            newrow5.append(column8[z])
-            newrow5.append(column9[z])
-        }
-        
-        func SetNewRow6(){
-            var z = 6
-            newrow6.append(column0[z])
-            newrow6.append(column1[z])
-            newrow6.append(column2[z])
-            newrow6.append(column3[z])
-            newrow6.append(column4[z])
-            newrow6.append(column5[z])
-            newrow6.append(column6[z])
-            newrow6.append(column7[z])
-            newrow6.append(column8[z])
-            newrow6.append(column9[z])
-        }
-        
-        func SetNewRow7(){
-            var z = 7
-            newrow7.append(column0[z])
-            newrow7.append(column1[z])
-            newrow7.append(column2[z])
-            newrow7.append(column3[z])
-            newrow7.append(column4[z])
-            newrow7.append(column5[z])
-            newrow7.append(column6[z])
-            newrow7.append(column7[z])
-            newrow7.append(column8[z])
-            newrow7.append(column9[z])
-        }
-        
-        func SetNewRow8(){
-            var z = 8
-            newrow8.append(column0[z])
-            newrow8.append(column1[z])
-            newrow8.append(column2[z])
-            newrow8.append(column3[z])
-            newrow8.append(column4[z])
-            newrow8.append(column5[z])
-            newrow8.append(column6[z])
-            newrow8.append(column7[z])
-            newrow8.append(column8[z])
-            newrow8.append(column9[z])
-        }
-        
-        func SetNewRow9(){
-            var z = 9
-            newrow9.append(column0[z])
-            newrow9.append(column1[z])
-            newrow9.append(column2[z])
-            newrow9.append(column3[z])
-            newrow9.append(column4[z])
-            newrow9.append(column5[z])
-            newrow9.append(column6[z])
-            newrow9.append(column7[z])
-            newrow9.append(column8[z])
-            newrow9.append(column9[z])
-        }
-        
-        func SetNewRow10(){
-            var z = 10
-            newrow10.append(column0[z])
-            newrow10.append(column1[z])
-            newrow10.append(column2[z])
-            newrow10.append(column3[z])
-            newrow10.append(column4[z])
-            newrow10.append(column5[z])
-            newrow10.append(column6[z])
-            newrow10.append(column7[z])
-            newrow10.append(column8[z])
-            newrow10.append(column9[z])
-        }
-        
-        SetNewRow0()
-        SetNewRow1()
-        SetNewRow2()
-        SetNewRow3()
-        SetNewRow4()
-        SetNewRow5()
-        SetNewRow6()
-        SetNewRow7()
-        SetNewRow8()
-        SetNewRow9()
-        SetNewRow10()
-
-    }
-
 
     
     //MARK: - Word Bank
@@ -615,46 +252,8 @@ class ViewController: UIViewController, UITextViewDelegate, UINavigationControll
     
     
     //MARK: - Search Algorithms
-    
-    //Top to Bottom
-    func TopBottom(){
-        
-    }
-    
-    //Bottom to Top
-    func BottomTop(){
-        
-    }
-    
-    //Left to Right (Straight)
-    func LRstraight(){
-        
-    }
-    
-    //Left to Right (Diagonal UP)
-    func LRdiagonalUP(){
-        
-    }
-    
-    //Left to Right (Diagonal DOWN)
-    func LRdiagonalDOWN(){
-        
-    }
-    
-    //Right to Left (Straight)
-    func RLstraight(){
-        
-    }
-    
-    //Right to Left (Diagonal UP)
-    func RLdiagonalUP(){
-        
-    }
-    
-    //Right to Left (Diagonal DOWN)
-    func RLdiagonalDOWN(){
-        
-    }
+   
+
 }
 
 extension ViewController: UITextFieldDelegate {
@@ -686,6 +285,586 @@ extension ViewController: UIImagePickerControllerDelegate {
             dismissViewControllerAnimated(true, completion: {
                 self.performImageRecognition(scaledImage)
             })
+    }
+}
+
+class WordSearch{
+   // var rows = 11
+    var columns = 10
+    var x = 0
+    var TempWord = ""
+    
+    func FindWordLR(WordBank : String){
+        var z = 0
+        if(WordBank != ""){
+            var isfound : Bool = false
+            var TheWordBank = WordBank.uppercaseString
+            var word2search = Array(TheWordBank)
+            
+            for(var x = 0; x < rows; x++){
+                for(var y = 0; ((y<columns)&&((TempWord != "") || !(y>columns-word2search.count))); y++){
+                    if(array2D[x][y] == String(word2search[z])){
+                        TempWord.append(word2search[z])
+                        //  TempWord += word2search[z]
+                        z++
+                        // println(array2D[x][y])
+                    }
+                    else{
+                        if(y>0){
+                            if(array2D[x][y] == array2D[x][y-1]){
+                            }}
+                        else{
+                            TempWord = ""
+                            z = 0
+                        }
+                    }
+                    if (TempWord == TheWordBank)
+                    {
+                        println("Found Word: \(TempWord)")
+                        x = 1000
+                        y = 1000
+                        z = 0
+                        TempWord = ""
+                        isfound = true
+                        
+                    }
+                }
+            }
+            if(isfound == false){
+                println("\(WordBank.uppercaseString) could not be found")
+            }
+            word2search.removeAll(keepCapacity: false)
+            z = 0
+            TempWord = ""
+        }}
+    func FindWordRL(WordBank : String){
+        var z = 0
+        if(WordBank != ""){
+            var isfound : Bool = false
+            var TheWordBank = WordBank.uppercaseString
+            var word2search = Array(TheWordBank)
+            
+            for(var x = 0; x < rows; x++){
+                for(var y = 0; ((y<columns)&&((TempWord != "") || !(y>columns-word2search.count))); y++){
+                    if(array2D[x][y] == String(word2search[word2search.count-1-z])){
+                        TempWord.append(word2search[z])
+                        //  TempWord += word2search[z]
+                        z++
+                        // println(array2D[x][y])
+                    }
+                    else{
+                        if(y>0){
+                            if(array2D[x][y] == array2D[x][y-1]){
+                            }}
+                        else{
+                            TempWord = ""
+                            z = 0
+                        }
+                        println(array2D[x][y])
+                    }
+                    if (TempWord == TheWordBank)
+                    {
+                        println("Found Word: \(TempWord)")
+                        x = 1000
+                        y = 1000
+                        z = 0
+                        TempWord = ""
+                        isfound = true
+                        
+                    }
+                }
+            }
+            if(isfound == false){
+                println("\(WordBank.uppercaseString) could not be found")
+            }
+            word2search.removeAll(keepCapacity: false)
+            z = 0
+            TempWord = ""
+        }
+    }
+    func FindWordTB(WordBank : String){
+        var z = 0
+        if(WordBank != ""){
+            var isfound : Bool = false
+            var TheWordBank = WordBank.uppercaseString
+            var word2search = Array(TheWordBank)
+            
+            for(var y = 0; y < columns; y++){
+                for(var x = 0; /*x < columns*/   ((x<rows)&&((TempWord != "") || !(x>rows-word2search.count))); x++){
+                    if(array2D[x][y] == String(word2search[z])){
+                        TempWord.append(word2search[z])
+                        //  TempWord += word2search[z]
+                        z++
+                        println(array2D[x][y])
+                    }
+                    else{
+                        if(x>0){
+                            if(array2D[x][y] == array2D[x-1][y]){
+                            }}
+                        else{
+                            TempWord = ""
+                            z = 0
+                        }
+                        println(array2D[x][y])
+                    }
+                    if (TempWord == TheWordBank)
+                    {
+                        println("Found Word: \(TempWord)")
+                        x = 1000
+                        y = 1000
+                        z = 0
+                        TempWord = ""
+                        isfound = true
+                        
+                    }
+                }
+            }
+            if(isfound == false){
+                println("\(WordBank.uppercaseString) could not be found")
+            }
+            word2search.removeAll(keepCapacity: false)
+            z = 0
+            TempWord = ""
+        }
+    }
+    func FindWordBT(WordBank : String){
+        var z = 0
+        if(WordBank != ""){
+            var isfound : Bool = false
+            var TheWordBank = WordBank.uppercaseString
+            var word2search = Array(TheWordBank)
+            
+            for(var y = 0; y < columns; y++){
+                for(var x = 0; /*x < columns*/   ((x<rows)&&((TempWord != "") || !(x>rows-word2search.count))); x++){
+                    if(array2D[x][y] == String(word2search[word2search.count-1-z])){
+                        TempWord.append(word2search[z])
+                        //  TempWord += word2search[z]
+                        z++
+                        println(array2D[x][y])
+                    }
+                    else{
+                        if(x>0){
+                            if(array2D[x][y] == array2D[x-1][y]){
+                            }}
+                        else{
+                            TempWord = ""
+                            z = 0
+                        }
+                        println(array2D[x][y])
+                    }
+                    if (TempWord == TheWordBank)
+                    {
+                        println("Found Word: \(TempWord)")
+                        x = 1000
+                        y = 1000
+                        z = 0
+                        TempWord = ""
+                        isfound = true
+                        
+                    }
+                }
+            }
+            if(isfound == false){
+                println("\(WordBank.uppercaseString) could not be found")
+            }
+            word2search.removeAll(keepCapacity: false)
+            z = 0
+            TempWord = ""
+        }
+        
+    }
+    func FindWordLRDiagUP(WordBank : String){
+        var z = 0
+        var Temp1 = 0
+        var Temp2 = 0
+        var stop = false
+        
+        if(WordBank != ""){
+            var isfound : Bool = false
+            var TheWordBank = WordBank.uppercaseString
+            var word2search = Array(TheWordBank)
+            
+            for(var y = 0; y < columns; y++){ //ADDED
+                //   for(var x = 1; x < columns; x++){
+                for(var x = rows-1; ((x >= word2search.count-1)&&(x<250)); x--){
+                    Temp1 = x
+                    Temp2 = y
+                    
+                    println("[\(x)][\(y)]")
+                    
+                    println(array2D[x][y])
+                    
+                    if(isfound==false){
+                        if(array2D[x][y] == String(word2search[z])){
+                            TempWord.append(word2search[z])
+                            z++
+                            stop = false
+                            println("[\(x)][\(y)]")
+                            //                        println(y)
+                            
+                            if (TempWord == TheWordBank){
+                                println("Found Word: \(TempWord)")
+                                x = 1000
+                                y = 1000
+                                z = 0
+                                TempWord = ""
+                                isfound = true
+                            }
+                            if(isfound==false){
+                                for(x; (((x>0)&&(z<word2search.count))&&(stop==false)); x){
+                                    x--
+                                    ++y
+                                    println(x)
+                                    println(y)
+                                    if((x >= 0) && (y < columns)){
+                                        // if(y < columns){
+                                        if(array2D[x][y] == String(word2search[z])){
+                                            TempWord.append(word2search[z])
+                                            z++
+                                        }
+                                        else{
+                                            x = Temp1
+                                            y = Temp2
+                                            z = 0
+                                            TempWord = ""
+                                            println(array2D[x][y])
+                                            stop = true
+                                        }
+                                    }
+                                    else{
+                                        x = Temp1
+                                        y = Temp2
+                                        z = 0
+                                        TempWord = ""
+                                        println(array2D[x][y])
+                                        stop = true
+                                    }
+                                    
+                                    if (TempWord == TheWordBank){
+                                        println("Found Word: \(TempWord)")
+                                        x = 1000
+                                        y = 1000
+                                        z = 0
+                                        TempWord = ""
+                                        isfound = true
+                                        stop = true
+                                        
+                                    }
+                                }
+                            }
+                        }
+                            
+                        else{
+                            TempWord = ""
+                            z = 0
+                        }
+                    }
+                    
+                }
+            }
+            
+            if(isfound == false){
+                println("\(WordBank.uppercaseString) could not be found")
+            }
+            word2search.removeAll(keepCapacity: false)
+            z = 0
+            TempWord = ""
+        }
+        
+    }
+    func FindWordLRDiagDOWN(WordBank : String){
+        var z = 0
+        var Temp1 = 0
+        var Temp2 = 0
+        var stop = false
+        
+        if(WordBank != ""){
+            var isfound : Bool = false
+            var TheWordBank = WordBank.uppercaseString
+            var word2search = Array(TheWordBank)
+            
+            for(var y = 0; y < columns; y++){ //ADDED
+                //   for(var x = 1; x < columns; x++){
+                for(var x = 0; ((x <= rows - word2search.count)&&(x<250)); x++){
+                    Temp1 = x
+                    Temp2 = y
+                    
+                    println("[\(x)][\(y)]")
+                    
+                    println(array2D[x][y])
+                    
+                    if(isfound==false){
+                        if(array2D[x][y] == String(word2search[z])){
+                            TempWord.append(word2search[z])
+                            z++
+                            stop = false
+                            println("[\(x)][\(y)]")
+                            //                        println(y)
+                            
+                            if (TempWord == TheWordBank){
+                                println("Found Word: \(TempWord)")
+                                x = 1000
+                                y = 1000
+                                z = 0
+                                TempWord = ""
+                                isfound = true
+                            }
+                            if(isfound==false){
+                                for(x; (((x<rows)&&(z<word2search.count))&&(stop==false)); x){
+                                    x++
+                                    ++y
+                                    println(x)
+                                    println(y)
+                                    if((x < rows) && (y < columns)){
+                                        // if(y < columns){
+                                        if(array2D[x][y] == String(word2search[z])){
+                                            TempWord.append(word2search[z])
+                                            z++
+                                        }
+                                        else{
+                                            x = Temp1
+                                            y = Temp2
+                                            z = 0
+                                            TempWord = ""
+                                            println(array2D[x][y])
+                                            stop = true
+                                        }
+                                    }
+                                    else{
+                                        x = Temp1
+                                        y = Temp2
+                                        z = 0
+                                        TempWord = ""
+                                        println(array2D[x][y])
+                                        stop = true
+                                    }
+                                    
+                                    if (TempWord == TheWordBank){
+                                        println("Found Word: \(TempWord)")
+                                        x = 1000
+                                        y = 1000
+                                        z = 0
+                                        TempWord = ""
+                                        isfound = true
+                                        stop = true
+                                        
+                                    }
+                                }
+                            }
+                        }
+                            
+                        else{
+                            TempWord = ""
+                            z = 0
+                        }
+                    }
+                    
+                }
+            }
+            
+            if(isfound == false){
+                println("\(WordBank.uppercaseString) could not be found")
+            }
+            word2search.removeAll(keepCapacity: false)
+            z = 0
+            TempWord = ""
+        }
+    }
+    func FindWordRLDiagUP(WordBank : String){
+        var z = 0
+        var Temp1 = 0
+        var Temp2 = 0
+        var stop = false
+        
+        if(WordBank != ""){
+            var isfound : Bool = false
+            var TheWordBank = WordBank.uppercaseString
+            var word2search = Array(TheWordBank)
+            
+            for(var y = 0; y < columns; y++){ //ADDED
+                //   for(var x = 1; x < columns; x++){
+                for(var x = 0; ((x <= rows - word2search.count)&&(x<250)); x++){
+                    Temp1 = x
+                    Temp2 = y
+                    
+                    println("[\(x)][\(y)]")
+                    
+                    println(array2D[x][y])
+                    
+                    if(isfound==false){
+                        if(array2D[x][y] == String(word2search[word2search.count-1-z])){
+                            TempWord.append(word2search[z])
+                            z++
+                            stop = false
+                            println("[\(x)][\(y)]")
+                            //                        println(y)
+                            
+                            if (TempWord == TheWordBank){
+                                println("Found Word: \(TempWord)")
+                                x = 1000
+                                y = 1000
+                                z = 0
+                                TempWord = ""
+                                isfound = true
+                            }
+                            if(isfound==false){
+                                for(x; (((x<rows)&&(z<word2search.count))&&(stop==false)); x){
+                                    x++
+                                    ++y
+                                    println(x)
+                                    println(y)
+                                    if((x < rows) && (y < columns)){
+                                        // if(y < columns){
+                                        if(array2D[x][y] == String(word2search[word2search.count-1-z])){
+                                            TempWord.append(word2search[z])
+                                            z++
+                                        }
+                                        else{
+                                            x = Temp1
+                                            y = Temp2
+                                            z = 0
+                                            TempWord = ""
+                                            println(array2D[x][y])
+                                            stop = true
+                                        }
+                                    }
+                                    else{
+                                        x = Temp1
+                                        y = Temp2
+                                        z = 0
+                                        TempWord = ""
+                                        println(array2D[x][y])
+                                        stop = true
+                                    }
+                                    
+                                    if (TempWord == TheWordBank){
+                                        println("Found Word: \(TempWord)")
+                                        x = 1000
+                                        y = 1000
+                                        z = 0
+                                        TempWord = ""
+                                        isfound = true
+                                        stop = true
+                                        
+                                    }
+                                }
+                            }
+                        }
+                            
+                        else{
+                            TempWord = ""
+                            z = 0
+                        }
+                    }
+                    
+                }
+            }
+            
+            if(isfound == false){
+                println("\(WordBank.uppercaseString) could not be found")
+            }
+            word2search.removeAll(keepCapacity: false)
+            z = 0
+            TempWord = ""
+        }
+    }
+    func FindWordRLDiagDOWN(WordBank : String){
+        var z = 0
+        var Temp1 = 0
+        var Temp2 = 0
+        var stop = false
+        
+        if(WordBank != ""){
+            var isfound : Bool = false
+            var TheWordBank = WordBank.uppercaseString
+            var word2search = Array(TheWordBank)
+            
+            for(var y = 0; y < columns; y++){ //ADDED
+                //   for(var x = 1; x < columns; x++){
+                for(var x = rows-1; ((x >= word2search.count-1)&&(x<250)); x--){
+                    Temp1 = x
+                    Temp2 = y
+                    
+                    println("[\(x)][\(y)]")
+                    
+                    println(array2D[x][y])
+                    
+                    if(isfound==false){
+                        if(array2D[x][y] == String(word2search[word2search.count-1-z])){
+                            TempWord.append(word2search[z])
+                            z++
+                            stop = false
+                            println("[\(x)][\(y)]")
+                            //                        println(y)
+                            
+                            if (TempWord == TheWordBank){
+                                println("Found Word: \(TempWord)")
+                                x = 1000
+                                y = 1000
+                                z = 0
+                                TempWord = ""
+                                isfound = true
+                            }
+                            if(isfound==false){
+                                for(x; (((x>0)&&(z<word2search.count))&&(stop==false)); x){
+                                    x--
+                                    ++y
+                                    println(x)
+                                    println(y)
+                                    if((x >= 0) && (y < columns)){
+                                        // if(y < columns){
+                                        if(array2D[x][y] == String(word2search[word2search.count-1-z])){
+                                            TempWord.append(word2search[z])
+                                            z++
+                                        }
+                                        else{
+                                            x = Temp1
+                                            y = Temp2
+                                            z = 0
+                                            TempWord = ""
+                                            println(array2D[x][y])
+                                            stop = true
+                                        }
+                                    }
+                                    else{
+                                        x = Temp1
+                                        y = Temp2
+                                        z = 0
+                                        TempWord = ""
+                                        println(array2D[x][y])
+                                        stop = true
+                                    }
+                                    
+                                    if (TempWord == TheWordBank){
+                                        println("Found Word: \(TempWord)")
+                                        x = 1000
+                                        y = 1000
+                                        z = 0
+                                        TempWord = ""
+                                        isfound = true
+                                        stop = true
+                                        
+                                    }
+                                }
+                            }
+                        }
+                            
+                        else{
+                            TempWord = ""
+                            z = 0
+                        }
+                    }
+                    
+                }
+            }
+            
+            if(isfound == false){
+                println("\(WordBank.uppercaseString) could not be found")
+            }
+            word2search.removeAll(keepCapacity: false)
+            z = 0
+            TempWord = ""
+        }
     }
 }
 
