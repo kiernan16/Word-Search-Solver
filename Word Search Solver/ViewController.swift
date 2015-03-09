@@ -228,7 +228,7 @@ class ViewController: UIViewController, UITextViewDelegate, UINavigationControll
         //Use textView
        let myarray = Array(textView.text)
         
-        
+       // stuff should be here
         var tempcolumn = [Character]()
         
         var x : Int = 0
@@ -431,17 +431,7 @@ class ViewController: UIViewController, UITextViewDelegate, UINavigationControll
         
         tempcolumn = []
         
-//        var newrow0 = [Character]()
-//        var newrow1 = [Character]()
-//        var newrow2 = [Character]()
-//        var newrow3 = [Character]()
-//        var newrow4 = [Character]()
-//        var newrow5 = [Character]()
-//        var newrow6 = [Character]()
-//        var newrow7 = [Character]()
-//        var newrow8 = [Character]()
-//        var newrow9 = [Character]()
-//        var newrow10 = [Character]()
+// stuff should be here
         
         
         
