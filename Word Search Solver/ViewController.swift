@@ -305,9 +305,7 @@ class WordSearch{
                 for(var y = 0; ((y<columns)&&((TempWord != "") || !(y>columns-word2search.count))); y++){
                     if(array2D[x][y] == String(word2search[z])){
                         TempWord.append(word2search[z])
-                        //  TempWord += word2search[z]
                         z++
-                        // println(array2D[x][y])
                     }
                     else{
                         if(y>0){
@@ -348,9 +346,7 @@ class WordSearch{
                 for(var y = 0; ((y<columns)&&((TempWord != "") || !(y>columns-word2search.count))); y++){
                     if(array2D[x][y] == String(word2search[word2search.count-1-z])){
                         TempWord.append(word2search[z])
-                        //  TempWord += word2search[z]
                         z++
-                        // println(array2D[x][y])
                     }
                     else{
                         if(y>0){
@@ -360,7 +356,6 @@ class WordSearch{
                             TempWord = ""
                             z = 0
                         }
-                        println(array2D[x][y])
                     }
                     if (TempWord == TheWordBank)
                     {
@@ -393,9 +388,7 @@ class WordSearch{
                 for(var x = 0; /*x < columns*/   ((x<rows)&&((TempWord != "") || !(x>rows-word2search.count))); x++){
                     if(array2D[x][y] == String(word2search[z])){
                         TempWord.append(word2search[z])
-                        //  TempWord += word2search[z]
                         z++
-                        println(array2D[x][y])
                     }
                     else{
                         if(x>0){
@@ -405,7 +398,6 @@ class WordSearch{
                             TempWord = ""
                             z = 0
                         }
-                        println(array2D[x][y])
                     }
                     if (TempWord == TheWordBank)
                     {
@@ -438,9 +430,7 @@ class WordSearch{
                 for(var x = 0; /*x < columns*/   ((x<rows)&&((TempWord != "") || !(x>rows-word2search.count))); x++){
                     if(array2D[x][y] == String(word2search[word2search.count-1-z])){
                         TempWord.append(word2search[z])
-                        //  TempWord += word2search[z]
                         z++
-                        println(array2D[x][y])
                     }
                     else{
                         if(x>0){
@@ -450,7 +440,6 @@ class WordSearch{
                             TempWord = ""
                             z = 0
                         }
-                        println(array2D[x][y])
                     }
                     if (TempWord == TheWordBank)
                     {
@@ -484,23 +473,18 @@ class WordSearch{
             var TheWordBank = WordBank.uppercaseString
             var word2search = Array(TheWordBank)
             
-            for(var y = 0; y < columns; y++){ //ADDED
-                //   for(var x = 1; x < columns; x++){
+            for(var y = 0; y < columns; y++){
                 for(var x = rows-1; ((x >= word2search.count-1)&&(x<250)); x--){
                     Temp1 = x
                     Temp2 = y
                     
-                    println("[\(x)][\(y)]")
                     
-                    println(array2D[x][y])
                     
                     if(isfound==false){
                         if(array2D[x][y] == String(word2search[z])){
                             TempWord.append(word2search[z])
                             z++
                             stop = false
-                            println("[\(x)][\(y)]")
-                            //                        println(y)
                             
                             if (TempWord == TheWordBank){
                                 println("Found Word: \(TempWord)")
@@ -514,10 +498,7 @@ class WordSearch{
                                 for(x; (((x>0)&&(z<word2search.count))&&(stop==false)); x){
                                     x--
                                     ++y
-                                    println(x)
-                                    println(y)
                                     if((x >= 0) && (y < columns)){
-                                        // if(y < columns){
                                         if(array2D[x][y] == String(word2search[z])){
                                             TempWord.append(word2search[z])
                                             z++
@@ -527,7 +508,6 @@ class WordSearch{
                                             y = Temp2
                                             z = 0
                                             TempWord = ""
-                                            println(array2D[x][y])
                                             stop = true
                                         }
                                     }
@@ -536,7 +516,6 @@ class WordSearch{
                                         y = Temp2
                                         z = 0
                                         TempWord = ""
-                                        println(array2D[x][y])
                                         stop = true
                                     }
                                     
@@ -589,17 +568,11 @@ class WordSearch{
                     Temp1 = x
                     Temp2 = y
                     
-                    println("[\(x)][\(y)]")
-                    
-                    println(array2D[x][y])
-                    
                     if(isfound==false){
                         if(array2D[x][y] == String(word2search[z])){
                             TempWord.append(word2search[z])
                             z++
                             stop = false
-                            println("[\(x)][\(y)]")
-                            //                        println(y)
                             
                             if (TempWord == TheWordBank){
                                 println("Found Word: \(TempWord)")
@@ -613,10 +586,7 @@ class WordSearch{
                                 for(x; (((x<rows)&&(z<word2search.count))&&(stop==false)); x){
                                     x++
                                     ++y
-                                    println(x)
-                                    println(y)
                                     if((x < rows) && (y < columns)){
-                                        // if(y < columns){
                                         if(array2D[x][y] == String(word2search[z])){
                                             TempWord.append(word2search[z])
                                             z++
@@ -626,7 +596,6 @@ class WordSearch{
                                             y = Temp2
                                             z = 0
                                             TempWord = ""
-                                            println(array2D[x][y])
                                             stop = true
                                         }
                                     }
@@ -635,7 +604,6 @@ class WordSearch{
                                         y = Temp2
                                         z = 0
                                         TempWord = ""
-                                        println(array2D[x][y])
                                         stop = true
                                     }
                                     
@@ -687,17 +655,11 @@ class WordSearch{
                     Temp1 = x
                     Temp2 = y
                     
-                    println("[\(x)][\(y)]")
-                    
-                    println(array2D[x][y])
-                    
                     if(isfound==false){
                         if(array2D[x][y] == String(word2search[word2search.count-1-z])){
                             TempWord.append(word2search[z])
                             z++
                             stop = false
-                            println("[\(x)][\(y)]")
-                            //                        println(y)
                             
                             if (TempWord == TheWordBank){
                                 println("Found Word: \(TempWord)")
@@ -711,8 +673,6 @@ class WordSearch{
                                 for(x; (((x<rows)&&(z<word2search.count))&&(stop==false)); x){
                                     x++
                                     ++y
-                                    println(x)
-                                    println(y)
                                     if((x < rows) && (y < columns)){
                                         // if(y < columns){
                                         if(array2D[x][y] == String(word2search[word2search.count-1-z])){
@@ -724,7 +684,6 @@ class WordSearch{
                                             y = Temp2
                                             z = 0
                                             TempWord = ""
-                                            println(array2D[x][y])
                                             stop = true
                                         }
                                     }
@@ -733,7 +692,6 @@ class WordSearch{
                                         y = Temp2
                                         z = 0
                                         TempWord = ""
-                                        println(array2D[x][y])
                                         stop = true
                                     }
                                     
@@ -785,17 +743,11 @@ class WordSearch{
                     Temp1 = x
                     Temp2 = y
                     
-                    println("[\(x)][\(y)]")
-                    
-                    println(array2D[x][y])
-                    
                     if(isfound==false){
                         if(array2D[x][y] == String(word2search[word2search.count-1-z])){
                             TempWord.append(word2search[z])
                             z++
                             stop = false
-                            println("[\(x)][\(y)]")
-                            //                        println(y)
                             
                             if (TempWord == TheWordBank){
                                 println("Found Word: \(TempWord)")
@@ -809,8 +761,6 @@ class WordSearch{
                                 for(x; (((x>0)&&(z<word2search.count))&&(stop==false)); x){
                                     x--
                                     ++y
-                                    println(x)
-                                    println(y)
                                     if((x >= 0) && (y < columns)){
                                         // if(y < columns){
                                         if(array2D[x][y] == String(word2search[word2search.count-1-z])){
@@ -822,7 +772,6 @@ class WordSearch{
                                             y = Temp2
                                             z = 0
                                             TempWord = ""
-                                            println(array2D[x][y])
                                             stop = true
                                         }
                                     }
@@ -831,7 +780,6 @@ class WordSearch{
                                         y = Temp2
                                         z = 0
                                         TempWord = ""
-                                        println(array2D[x][y])
                                         stop = true
                                     }
                                     
