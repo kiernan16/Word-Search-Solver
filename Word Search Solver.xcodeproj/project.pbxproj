@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		345B80451AAF802B007E2395 /* WordSearchClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345B80441AAF802B007E2395 /* WordSearchClass.swift */; };
 		34D5A7061A987ABC004ADD06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D5A7051A987ABC004ADD06 /* AppDelegate.swift */; };
 		34D5A7081A987ABC004ADD06 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D5A7071A987ABC004ADD06 /* ViewController.swift */; };
 		34D5A70B1A987ABC004ADD06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34D5A7091A987ABC004ADD06 /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		345B80441AAF802B007E2395 /* WordSearchClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordSearchClass.swift; sourceTree = "<group>"; };
 		34D5A7001A987ABC004ADD06 /* Word Search Solver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Word Search Solver.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		34D5A7041A987ABC004ADD06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34D5A7051A987ABC004ADD06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 			children = (
 				34D5A7051A987ABC004ADD06 /* AppDelegate.swift */,
 				34D5A7071A987ABC004ADD06 /* ViewController.swift */,
+				345B80441AAF802B007E2395 /* WordSearchClass.swift */,
 				34D5A7091A987ABC004ADD06 /* Main.storyboard */,
 				34D5A70C1A987ABC004ADD06 /* Images.xcassets */,
 				34D5A70E1A987ABD004ADD06 /* LaunchScreen.xib */,
@@ -232,6 +235,7 @@
 			files = (
 				34D5A7081A987ABC004ADD06 /* ViewController.swift in Sources */,
 				34D5A7061A987ABC004ADD06 /* AppDelegate.swift in Sources */,
+				345B80451AAF802B007E2395 /* WordSearchClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,6 +446,7 @@
 				34D5A7211A987ABD004ADD06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		34D5A7221A987ABD004ADD06 /* Build configuration list for PBXNativeTarget "Word Search SolverTests" */ = {
 			isa = XCConfigurationList;
@@ -450,6 +455,7 @@
 				34D5A7241A987ABD004ADD06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
