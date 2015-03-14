@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,143 +17,471 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Mt-Km-pq5">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Word Bank 1" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="esD-Mp-e5W">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="AWS-H5-QtL"/>
+                                    <constraint firstAttribute="width" constant="110" id="B6L-yH-y84"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="152" y="385" width="97" height="30"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="AWS-H5-QtL"/>
+                                        <exclude reference="B6L-yH-y84"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES">
+                                    <rect key="frame" x="16" y="435" width="110" height="30"/>
+                                    <mask key="constraints">
+                                        <include reference="AWS-H5-QtL"/>
+                                        <include reference="B6L-yH-y84"/>
+                                    </mask>
                                 </variation>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Word Bank 1" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="esD-Mp-e5W">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Word Bank 2" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qx3-6O-TuT">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="7lv-V3-KPD"/>
+                                    <constraint firstAttribute="width" constant="110" id="RMm-oN-2QT"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="385" width="97" height="30"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="7lv-V3-KPD"/>
+                                        <exclude reference="RMm-oN-2QT"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES">
+                                    <rect key="frame" x="150" y="435" width="110" height="30"/>
+                                    <mask key="constraints">
+                                        <include reference="7lv-V3-KPD"/>
+                                        <include reference="RMm-oN-2QT"/>
+                                    </mask>
                                 </variation>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Word Bank 2" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qx3-6O-TuT">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Word Bank 3" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qb2-Fg-glx">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="103" id="je6-i0-PZf"/>
+                                    <constraint firstAttribute="height" constant="30" id="mVH-Bm-cE4"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="152" y="385" width="97" height="30"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="je6-i0-PZf"/>
+                                        <exclude reference="mVH-Bm-cE4"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES">
+                                    <rect key="frame" x="281" y="435" width="103" height="30"/>
+                                    <mask key="constraints">
+                                        <include reference="je6-i0-PZf"/>
+                                        <include reference="mVH-Bm-cE4"/>
+                                    </mask>
                                 </variation>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Word Bank 4" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Hd-d2-WKM">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Word Bank 4" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Hd-d2-WKM">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Tyn-ZM-hx4"/>
+                                    <constraint firstAttribute="width" constant="110" id="c29-mA-1FD"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="434" width="97" height="30"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Tyn-ZM-hx4"/>
+                                        <exclude reference="c29-mA-1FD"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="16" y="484" width="110" height="30"/>
+                                    <mask key="constraints">
+                                        <include reference="Tyn-ZM-hx4"/>
+                                        <include reference="c29-mA-1FD"/>
+                                    </mask>
                                 </variation>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Word Bank 5" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x7k-ED-zXf">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Word Bank 5" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x7k-ED-zXf">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="NsV-Xa-eTb"/>
+                                    <constraint firstAttribute="width" constant="110" id="O1Q-pS-www"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="152" y="434" width="97" height="30"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="NsV-Xa-eTb"/>
+                                        <exclude reference="O1Q-pS-www"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="150" y="484" width="110" height="30"/>
+                                    <mask key="constraints">
+                                        <include reference="NsV-Xa-eTb"/>
+                                        <include reference="O1Q-pS-www"/>
+                                    </mask>
                                 </variation>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Word Bank 6" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5jZ-eW-hRR">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Word Bank 6" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5jZ-eW-hRR">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="4MP-44-Lqy"/>
+                                    <constraint firstAttribute="width" constant="103" id="KxZ-M1-dyC"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="287" y="434" width="97" height="30"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="4MP-44-Lqy"/>
+                                        <exclude reference="KxZ-M1-dyC"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="281" y="484" width="103" height="30"/>
+                                    <mask key="constraints">
+                                        <include reference="4MP-44-Lqy"/>
+                                        <include reference="KxZ-M1-dyC"/>
+                                    </mask>
                                 </variation>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Word Bank 7" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S89-T9-4bh">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Word Bank 7" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S89-T9-4bh">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="CQA-3p-qHL"/>
+                                    <constraint firstAttribute="width" constant="110" id="ECb-he-B6m"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="487" width="97" height="30"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="CQA-3p-qHL"/>
+                                        <exclude reference="ECb-he-B6m"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="16" y="537" width="110" height="30"/>
+                                    <mask key="constraints">
+                                        <include reference="CQA-3p-qHL"/>
+                                        <include reference="ECb-he-B6m"/>
+                                    </mask>
                                 </variation>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Word Bank 8" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EoR-0W-ypx">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Word Bank 8" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EoR-0W-ypx">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Ag7-hw-tuf"/>
+                                    <constraint firstAttribute="width" constant="110" id="eI1-xw-VG6"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="152" y="487" width="97" height="30"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Ag7-hw-tuf"/>
+                                        <exclude reference="eI1-xw-VG6"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="150" y="537" width="110" height="30"/>
+                                    <mask key="constraints">
+                                        <include reference="Ag7-hw-tuf"/>
+                                        <include reference="eI1-xw-VG6"/>
+                                    </mask>
                                 </variation>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Word Bank 9" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SNG-bH-jhg">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Word Bank 9" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SNG-bH-jhg">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="103" id="4wp-bo-qtr"/>
+                                    <constraint firstAttribute="height" constant="30" id="aVd-CL-MMM"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="287" y="487" width="97" height="30"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="4wp-bo-qtr"/>
+                                        <exclude reference="aVd-CL-MMM"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="281" y="537" width="103" height="30"/>
+                                    <mask key="constraints">
+                                        <include reference="4wp-bo-qtr"/>
+                                        <include reference="aVd-CL-MMM"/>
+                                    </mask>
                                 </variation>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Word Bank 10" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1FI-eg-1bk">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Word Bank 10" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1FI-eg-1bk">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="Rwi-Ht-lVb"/>
+                                    <constraint firstAttribute="height" constant="30" id="XlR-K3-w89"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="545" width="100" height="30"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Rwi-Ht-lVb"/>
+                                        <exclude reference="XlR-K3-w89"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="16" y="595" width="110" height="30"/>
+                                    <mask key="constraints">
+                                        <include reference="Rwi-Ht-lVb"/>
+                                        <include reference="XlR-K3-w89"/>
+                                    </mask>
                                 </variation>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Word Bank 11" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nuk-Ev-17c">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Word Bank 11" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nuk-Ev-17c">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="Xhq-rs-2jA"/>
+                                    <constraint firstAttribute="height" constant="30" id="blu-On-fw1"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="152" y="545" width="100" height="30"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Xhq-rs-2jA"/>
+                                        <exclude reference="blu-On-fw1"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="150" y="595" width="110" height="30"/>
+                                    <mask key="constraints">
+                                        <include reference="Xhq-rs-2jA"/>
+                                        <include reference="blu-On-fw1"/>
+                                    </mask>
                                 </variation>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Word Bank 12" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yun-JU-EmD">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Word Bank 12" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yun-JU-EmD">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="3gd-UK-66A"/>
+                                    <constraint firstAttribute="width" constant="106" id="p0O-OT-F3I"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="287" y="545" width="100" height="30"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="3gd-UK-66A"/>
+                                        <exclude reference="p0O-OT-F3I"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="281" y="595" width="106" height="30"/>
+                                    <mask key="constraints">
+                                        <include reference="3gd-UK-66A"/>
+                                        <include reference="p0O-OT-F3I"/>
+                                    </mask>
                                 </variation>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Rows" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fne-4F-08F">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="no. of ROWS" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fne-4F-08F">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="84" y="311" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="101" id="jPj-Ea-blh"/>
+                                    <constraint firstAttribute="height" constant="30" id="t1i-Xo-CGl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="done"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="jPj-Ea-blh"/>
+                                        <exclude reference="t1i-Xo-CGl"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES">
+                                    <rect key="frame" x="80" y="390" width="101" height="30"/>
+                                    <mask key="constraints">
+                                        <include reference="jPj-Ea-blh"/>
+                                        <include reference="t1i-Xo-CGl"/>
+                                    </mask>
                                 </variation>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Columns" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5hY-3x-hi0">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="no. of COLUMNS" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5hY-3x-hi0">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="220" y="311" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="84S-A4-TOs"/>
+                                    <constraint firstAttribute="height" constant="30" id="Zrm-jp-WvB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="84S-A4-TOs"/>
+                                        <exclude reference="Zrm-jp-WvB"/>
+                                    </mask>
                                 </variation>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Word Bank 3" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qb2-Fg-glx">
-                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="287" y="385" width="97" height="30"/>
+                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES">
+                                    <rect key="frame" x="220" y="390" width="110" height="30"/>
+                                    <mask key="constraints">
+                                        <include reference="84S-A4-TOs"/>
+                                        <include reference="Zrm-jp-WvB"/>
+                                    </mask>
                                 </variation>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qNh-dE-rBP">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="backgroundColor" red="0.96168154761904767" green="0.96168154761904767" blue="0.96168154761904767" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="350" id="gds-DE-e9K"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="350" id="wd2-Ho-azF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="80" y="28" width="250" height="250"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="gds-DE-e9K"/>
+                                        <exclude reference="wd2-Ho-azF"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES">
+                                    <rect key="frame" x="25" y="28" width="350" height="350"/>
+                                    <mask key="constraints">
+                                        <include reference="gds-DE-e9K"/>
+                                        <include reference="wd2-Ho-azF"/>
+                                    </mask>
                                 </variation>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2rM-TT-cuG">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="sKN-VD-aCn"/>
+                                    <constraint firstAttribute="width" constant="111" id="wKe-D6-Inu"/>
+                                </constraints>
+                                <state key="normal" title="Take Photo">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="sKN-VD-aCn"/>
+                                        <exclude reference="wKe-D6-Inu"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="sKN-VD-aCn"/>
+                                        <include reference="wKe-D6-Inu"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="takePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vuc-eg-pYt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kG4-GG-LI3">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="HcG-cw-ZTb"/>
+                                    <constraint firstAttribute="width" constant="46" id="waA-81-a34"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="HcG-cw-ZTb"/>
+                                        <exclude reference="waA-81-a34"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="HcG-cw-ZTb"/>
+                                        <include reference="waA-81-a34"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="backgroundTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ngw-Re-oM2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="qx3-6O-TuT" secondAttribute="centerX" id="1l9-ij-2dk"/>
+                            <constraint firstAttribute="centerX" secondItem="x7k-ED-zXf" secondAttribute="centerX" id="1m7-0L-SEc"/>
+                            <constraint firstItem="1FI-eg-1bk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="6BZ-sp-qaK"/>
+                            <constraint firstItem="nuk-Ev-17c" firstAttribute="top" secondItem="EoR-0W-ypx" secondAttribute="bottom" constant="15" id="6d6-ep-r3x"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2rM-TT-cuG" secondAttribute="bottom" constant="8" id="7Et-O2-QUv"/>
+                            <constraint firstItem="3Hd-d2-WKM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="8WV-du-Zeq"/>
+                            <constraint firstAttribute="centerX" secondItem="EoR-0W-ypx" secondAttribute="centerX" id="8ej-0G-ZBk"/>
+                            <constraint firstItem="SNG-bH-jhg" firstAttribute="leading" secondItem="EoR-0W-ypx" secondAttribute="trailing" constant="21" id="8kW-nD-OBg"/>
+                            <constraint firstItem="esD-Mp-e5W" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="A6V-zw-PL8"/>
+                            <constraint firstItem="yun-JU-EmD" firstAttribute="leading" secondItem="nuk-Ev-17c" secondAttribute="trailing" constant="21" id="AhI-0A-lLH"/>
+                            <constraint firstItem="esD-Mp-e5W" firstAttribute="top" secondItem="fne-4F-08F" secondAttribute="bottom" constant="15" id="CLc-Bg-nLq"/>
+                            <constraint firstItem="fne-4F-08F" firstAttribute="top" secondItem="qNh-dE-rBP" secondAttribute="bottom" constant="33" id="DAp-hH-6Sv">
+                                <variation key="heightClass=regular-widthClass=compact" constant="12"/>
+                            </constraint>
+                            <constraint firstItem="EoR-0W-ypx" firstAttribute="leading" secondItem="S89-T9-4bh" secondAttribute="trailing" constant="24" id="DP9-yc-Sxx"/>
+                            <constraint firstItem="x7k-ED-zXf" firstAttribute="leading" secondItem="3Hd-d2-WKM" secondAttribute="trailing" constant="24" id="DaA-VN-d9a"/>
+                            <constraint firstItem="qx3-6O-TuT" firstAttribute="top" secondItem="5hY-3x-hi0" secondAttribute="bottom" constant="44" id="Ebs-vg-Pci">
+                                <variation key="heightClass=regular-widthClass=compact" constant="15"/>
+                            </constraint>
+                            <constraint firstItem="S89-T9-4bh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Gau-EB-lNM"/>
+                            <constraint firstItem="Qb2-Fg-glx" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="IpV-Sv-efr"/>
+                            <constraint firstItem="nuk-Ev-17c" firstAttribute="leading" secondItem="1FI-eg-1bk" secondAttribute="trailing" constant="24" id="J63-lY-Bac"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5hY-3x-hi0" secondAttribute="trailing" constant="54" id="KNC-JF-k4C"/>
+                            <constraint firstItem="SNG-bH-jhg" firstAttribute="top" secondItem="5jZ-eW-hRR" secondAttribute="bottom" constant="23" id="O6F-nP-2pl">
+                                <variation key="heightClass=regular-widthClass=compact" constant="15"/>
+                            </constraint>
+                            <constraint firstAttribute="trailingMargin" secondItem="yun-JU-EmD" secondAttribute="trailing" constant="-3" id="O8X-gB-je0"/>
+                            <constraint firstItem="yun-JU-EmD" firstAttribute="top" secondItem="SNG-bH-jhg" secondAttribute="bottom" constant="28" id="Otf-N6-wdv">
+                                <variation key="heightClass=regular-widthClass=compact" constant="15"/>
+                            </constraint>
+                            <constraint firstItem="1FI-eg-1bk" firstAttribute="top" secondItem="S89-T9-4bh" secondAttribute="bottom" constant="15" id="PAn-oT-IUB"/>
+                            <constraint firstItem="yun-JU-EmD" firstAttribute="top" secondItem="SNG-bH-jhg" secondAttribute="bottom" constant="15" id="T8s-fO-KVy"/>
+                            <constraint firstItem="qx3-6O-TuT" firstAttribute="leading" secondItem="esD-Mp-e5W" secondAttribute="trailing" constant="24" id="Tzs-Ty-BOc"/>
+                            <constraint firstItem="Qb2-Fg-glx" firstAttribute="leading" secondItem="qx3-6O-TuT" secondAttribute="trailing" constant="21" id="VkZ-b3-tqz"/>
+                            <constraint firstItem="Qb2-Fg-glx" firstAttribute="top" secondItem="5hY-3x-hi0" secondAttribute="bottom" constant="44" id="WyS-sC-fQz">
+                                <variation key="heightClass=regular-widthClass=compact" constant="15"/>
+                            </constraint>
+                            <constraint firstItem="SNG-bH-jhg" firstAttribute="top" secondItem="5jZ-eW-hRR" secondAttribute="bottom" constant="15" id="X5H-rY-6ym"/>
+                            <constraint firstAttribute="centerX" secondItem="2rM-TT-cuG" secondAttribute="centerX" id="YrX-Uv-xyk"/>
+                            <constraint firstItem="5hY-3x-hi0" firstAttribute="top" secondItem="qNh-dE-rBP" secondAttribute="bottom" constant="33" id="ZgX-dK-cMj">
+                                <variation key="heightClass=regular-widthClass=compact" constant="12"/>
+                            </constraint>
+                            <constraint firstItem="5jZ-eW-hRR" firstAttribute="leading" secondItem="x7k-ED-zXf" secondAttribute="trailing" constant="21" id="a87-re-yEb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kG4-GG-LI3" secondAttribute="trailing" constant="5" id="al5-mX-2RH"/>
+                            <constraint firstItem="S89-T9-4bh" firstAttribute="top" secondItem="3Hd-d2-WKM" secondAttribute="bottom" constant="23" id="dkK-da-qho">
+                                <variation key="heightClass=regular-widthClass=compact" constant="15"/>
+                            </constraint>
+                            <constraint firstItem="esD-Mp-e5W" firstAttribute="top" secondItem="qNh-dE-rBP" secondAttribute="bottom" constant="107" id="fuD-Tg-sPk"/>
+                            <constraint firstItem="EoR-0W-ypx" firstAttribute="top" secondItem="x7k-ED-zXf" secondAttribute="bottom" constant="23" id="g08-xM-Hgj">
+                                <variation key="heightClass=regular-widthClass=compact" constant="15"/>
+                            </constraint>
+                            <constraint firstItem="S89-T9-4bh" firstAttribute="top" secondItem="3Hd-d2-WKM" secondAttribute="bottom" constant="15" id="hEH-hU-OWY"/>
+                            <constraint firstItem="nuk-Ev-17c" firstAttribute="top" secondItem="EoR-0W-ypx" secondAttribute="bottom" constant="28" id="hof-jh-5CQ">
+                                <variation key="heightClass=regular-widthClass=compact" constant="15"/>
+                            </constraint>
+                            <constraint firstItem="kG4-GG-LI3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="13" id="ihZ-SG-qA7"/>
+                            <constraint firstItem="3Hd-d2-WKM" firstAttribute="top" secondItem="esD-Mp-e5W" secondAttribute="bottom" constant="19" id="kxc-Kt-SF5">
+                                <variation key="heightClass=regular-widthClass=compact" constant="15"/>
+                            </constraint>
+                            <constraint firstItem="fne-4F-08F" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="64" id="l0j-hE-P1O"/>
+                            <constraint firstAttribute="centerX" secondItem="nuk-Ev-17c" secondAttribute="centerX" id="l22-Sz-dWs"/>
+                            <constraint firstAttribute="centerX" secondItem="qNh-dE-rBP" secondAttribute="centerX" id="mQZ-lW-9Ck"/>
+                            <constraint firstItem="SNG-bH-jhg" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="o5O-QH-amg"/>
+                            <constraint firstItem="1FI-eg-1bk" firstAttribute="top" secondItem="S89-T9-4bh" secondAttribute="bottom" constant="28" id="os7-Xs-Nsh">
+                                <variation key="heightClass=regular-widthClass=compact" constant="15"/>
+                            </constraint>
+                            <constraint firstItem="x7k-ED-zXf" firstAttribute="top" secondItem="qx3-6O-TuT" secondAttribute="bottom" constant="19" id="tkd-Nx-bnv">
+                                <variation key="heightClass=regular-widthClass=compact" constant="15"/>
+                            </constraint>
+                            <constraint firstItem="5jZ-eW-hRR" firstAttribute="top" secondItem="Qb2-Fg-glx" secondAttribute="bottom" constant="19" id="vw6-Cf-H7F">
+                                <variation key="heightClass=regular-widthClass=compact" constant="15"/>
+                            </constraint>
+                            <constraint firstItem="qNh-dE-rBP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="xCi-sS-eBF"/>
+                            <constraint firstItem="EoR-0W-ypx" firstAttribute="top" secondItem="x7k-ED-zXf" secondAttribute="bottom" constant="15" id="xlE-fL-mxO"/>
+                            <constraint firstItem="5jZ-eW-hRR" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="xsb-yN-XyS"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="5Mt-Km-pq5"/>
                                 <exclude reference="esD-Mp-e5W"/>
                                 <exclude reference="qx3-6O-TuT"/>
+                                <exclude reference="Qb2-Fg-glx"/>
                                 <exclude reference="3Hd-d2-WKM"/>
                                 <exclude reference="x7k-ED-zXf"/>
                                 <exclude reference="5jZ-eW-hRR"/>
@@ -164,15 +493,67 @@
                                 <exclude reference="yun-JU-EmD"/>
                                 <exclude reference="fne-4F-08F"/>
                                 <exclude reference="5hY-3x-hi0"/>
-                                <exclude reference="Qb2-Fg-glx"/>
                                 <exclude reference="qNh-dE-rBP"/>
+                                <exclude reference="2rM-TT-cuG"/>
+                                <exclude reference="kG4-GG-LI3"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="mQZ-lW-9Ck"/>
+                                <exclude reference="xCi-sS-eBF"/>
+                                <exclude reference="al5-mX-2RH"/>
+                                <exclude reference="ihZ-SG-qA7"/>
+                                <exclude reference="DAp-hH-6Sv"/>
+                                <exclude reference="l0j-hE-P1O"/>
+                                <exclude reference="A6V-zw-PL8"/>
+                                <exclude reference="CLc-Bg-nLq"/>
+                                <exclude reference="fuD-Tg-sPk"/>
+                                <exclude reference="KNC-JF-k4C"/>
+                                <exclude reference="ZgX-dK-cMj"/>
+                                <exclude reference="1l9-ij-2dk"/>
+                                <exclude reference="Ebs-vg-Pci"/>
+                                <exclude reference="Tzs-Ty-BOc"/>
+                                <exclude reference="8WV-du-Zeq"/>
+                                <exclude reference="kxc-Kt-SF5"/>
+                                <exclude reference="1m7-0L-SEc"/>
+                                <exclude reference="DaA-VN-d9a"/>
+                                <exclude reference="tkd-Nx-bnv"/>
+                                <exclude reference="IpV-Sv-efr"/>
+                                <exclude reference="VkZ-b3-tqz"/>
+                                <exclude reference="WyS-sC-fQz"/>
+                                <exclude reference="Gau-EB-lNM"/>
+                                <exclude reference="dkK-da-qho"/>
+                                <exclude reference="hEH-hU-OWY"/>
+                                <exclude reference="8ej-0G-ZBk"/>
+                                <exclude reference="DP9-yc-Sxx"/>
+                                <exclude reference="g08-xM-Hgj"/>
+                                <exclude reference="xlE-fL-mxO"/>
+                                <exclude reference="a87-re-yEb"/>
+                                <exclude reference="vw6-Cf-H7F"/>
+                                <exclude reference="xsb-yN-XyS"/>
+                                <exclude reference="6BZ-sp-qaK"/>
+                                <exclude reference="PAn-oT-IUB"/>
+                                <exclude reference="os7-Xs-Nsh"/>
+                                <exclude reference="8kW-nD-OBg"/>
+                                <exclude reference="O6F-nP-2pl"/>
+                                <exclude reference="X5H-rY-6ym"/>
+                                <exclude reference="o5O-QH-amg"/>
+                                <exclude reference="6d6-ep-r3x"/>
+                                <exclude reference="J63-lY-Bac"/>
+                                <exclude reference="hof-jh-5CQ"/>
+                                <exclude reference="l22-Sz-dWs"/>
+                                <exclude reference="AhI-0A-lLH"/>
+                                <exclude reference="O8X-gB-je0"/>
+                                <exclude reference="Otf-N6-wdv"/>
+                                <exclude reference="T8s-fO-KVy"/>
+                                <exclude reference="YrX-Uv-xyk"/>
+                                <exclude reference="7Et-O2-QUv"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="5Mt-Km-pq5"/>
                                 <include reference="esD-Mp-e5W"/>
                                 <include reference="qx3-6O-TuT"/>
+                                <include reference="Qb2-Fg-glx"/>
                                 <include reference="3Hd-d2-WKM"/>
                                 <include reference="x7k-ED-zXf"/>
                                 <include reference="5jZ-eW-hRR"/>
@@ -184,14 +565,84 @@
                                 <include reference="yun-JU-EmD"/>
                                 <include reference="fne-4F-08F"/>
                                 <include reference="5hY-3x-hi0"/>
-                                <include reference="Qb2-Fg-glx"/>
                                 <include reference="qNh-dE-rBP"/>
+                                <include reference="2rM-TT-cuG"/>
+                                <include reference="kG4-GG-LI3"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="mQZ-lW-9Ck"/>
+                                <include reference="xCi-sS-eBF"/>
+                                <include reference="al5-mX-2RH"/>
+                                <include reference="ihZ-SG-qA7"/>
+                                <include reference="DAp-hH-6Sv"/>
+                                <include reference="l0j-hE-P1O"/>
+                                <include reference="A6V-zw-PL8"/>
+                                <include reference="CLc-Bg-nLq"/>
+                                <exclude reference="fuD-Tg-sPk"/>
+                                <include reference="KNC-JF-k4C"/>
+                                <include reference="ZgX-dK-cMj"/>
+                                <include reference="1l9-ij-2dk"/>
+                                <include reference="Ebs-vg-Pci"/>
+                                <include reference="Tzs-Ty-BOc"/>
+                                <include reference="8WV-du-Zeq"/>
+                                <include reference="kxc-Kt-SF5"/>
+                                <include reference="1m7-0L-SEc"/>
+                                <include reference="DaA-VN-d9a"/>
+                                <include reference="tkd-Nx-bnv"/>
+                                <include reference="IpV-Sv-efr"/>
+                                <include reference="VkZ-b3-tqz"/>
+                                <include reference="WyS-sC-fQz"/>
+                                <include reference="Gau-EB-lNM"/>
+                                <exclude reference="dkK-da-qho"/>
+                                <include reference="hEH-hU-OWY"/>
+                                <include reference="8ej-0G-ZBk"/>
+                                <include reference="DP9-yc-Sxx"/>
+                                <exclude reference="g08-xM-Hgj"/>
+                                <include reference="xlE-fL-mxO"/>
+                                <include reference="a87-re-yEb"/>
+                                <include reference="vw6-Cf-H7F"/>
+                                <include reference="xsb-yN-XyS"/>
+                                <include reference="6BZ-sp-qaK"/>
+                                <include reference="PAn-oT-IUB"/>
+                                <exclude reference="os7-Xs-Nsh"/>
+                                <include reference="8kW-nD-OBg"/>
+                                <exclude reference="O6F-nP-2pl"/>
+                                <include reference="X5H-rY-6ym"/>
+                                <include reference="o5O-QH-amg"/>
+                                <include reference="6d6-ep-r3x"/>
+                                <include reference="J63-lY-Bac"/>
+                                <exclude reference="hof-jh-5CQ"/>
+                                <include reference="l22-Sz-dWs"/>
+                                <include reference="AhI-0A-lLH"/>
+                                <include reference="O8X-gB-je0"/>
+                                <include reference="Otf-N6-wdv"/>
+                                <include reference="T8s-fO-KVy"/>
+                                <include reference="YrX-Uv-xyk"/>
+                                <include reference="7Et-O2-QUv"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="Columns" destination="5hY-3x-hi0" id="n99-sl-eOJ"/>
+                        <outlet property="Rows" destination="fne-4F-08F" id="WWz-Ur-4UO"/>
+                        <outlet property="WB1" destination="esD-Mp-e5W" id="LLm-n2-EzD"/>
+                        <outlet property="WB10" destination="1FI-eg-1bk" id="gpj-QH-4j5"/>
+                        <outlet property="WB11" destination="nuk-Ev-17c" id="sEY-Q6-sMJ"/>
+                        <outlet property="WB12" destination="yun-JU-EmD" id="f7H-9L-SZM"/>
+                        <outlet property="WB2" destination="qx3-6O-TuT" id="R12-bi-Mw6"/>
+                        <outlet property="WB3" destination="Qb2-Fg-glx" id="QFj-NE-JqN"/>
+                        <outlet property="WB4" destination="3Hd-d2-WKM" id="Yd4-6d-fXy"/>
+                        <outlet property="WB5" destination="x7k-ED-zXf" id="h7z-aH-uQe"/>
+                        <outlet property="WB6" destination="5jZ-eW-hRR" id="UPy-HZ-nz9"/>
+                        <outlet property="WB7" destination="S89-T9-4bh" id="Xq1-x5-vHV"/>
+                        <outlet property="WB8" destination="EoR-0W-ypx" id="HUT-MB-XVc"/>
+                        <outlet property="WB9" destination="SNG-bH-jhg" id="zej-mS-T59"/>
+                        <outlet property="textView" destination="qNh-dE-rBP" id="VO8-iK-Hvv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="391.5" y="261"/>
         </scene>
     </scenes>
 </document>

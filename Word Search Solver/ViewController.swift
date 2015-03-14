@@ -9,74 +9,165 @@
 import UIKit
 import Foundation
 
-var rows = 11
-var columns = 10
+var rows : Int = 1
+var columns : Int = 1
 var x = 0
 var TempWord : String = ""
-var WordBank1 = "Buffalo"
+var wordbank1 = ""
+var wordbank2 = ""
+var wordbank3 = ""
+var wordbank4 = ""
+var wordbank5 = ""
+var wordbank6 = ""
+var wordbank7 = ""
+var wordbank8 = ""
+var wordbank9 = ""
+var wordbank10 = ""
+var wordbank11 = ""
+var wordbank12 = ""
+
+var isfound1 = false
+var isfound2 = false
+var isfound3 = false
+var isfound4 = false
+var isfound5 = false
+var isfound6 = false
+var isfound7 = false
+var isfound8 = false
+var isfound9 = false
+var isfound10 = false
+var isfound11 = false
+var isfound12 = false
+
+//var letters = ""
+var letters: String = "ELIGHTNINGFERTNBUFFALOCKEABKELINBEFWLRBUOESUKSTREIIWGFOABSAROKEOSFLFEUINAVLKFNUNBFIFABCLHMONSTERAOUTHUNDERBIRD"
+
 var array2D = Array<Array<String>>()
 
-class ViewController: UIViewController, UITextViewDelegate, UINavigationControllerDelegate {
+class ViewController: UIViewController, UITextViewDelegate, UITextFieldDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var textView: UITextView!
-    @IBOutlet weak var findTextField: UITextField!
-    @IBOutlet weak var replaceTextField: UITextField!
     @IBOutlet weak var topMarginConstraint: NSLayoutConstraint!
+    @IBOutlet weak var Rows: UITextField!
+    @IBOutlet weak var Columns: UITextField!
+    @IBOutlet weak var WB1: UITextField!
+    @IBOutlet weak var WB2: UITextField!
+    @IBOutlet weak var WB3: UITextField!
+    @IBOutlet weak var WB4: UITextField!
+    @IBOutlet weak var WB5: UITextField!
+    @IBOutlet weak var WB6: UITextField!
+    @IBOutlet weak var WB7: UITextField!
+    @IBOutlet weak var WB8: UITextField!
+    @IBOutlet weak var WB9: UITextField!
+    @IBOutlet weak var WB10: UITextField!
+    @IBOutlet weak var WB11: UITextField!
+    @IBOutlet weak var WB12: UITextField!
     
     var activityIndicator:UIActivityIndicatorView!
     var originalTopMargin:CGFloat!
     
-    var wordbank1 = []
-    var wordbank2 = []
-    var wordbank3 = []
-    var wordbank4 = []
-    var wordbank5 = []
-    var wordbank6 = []
-    var wordbank7 = []
-    var wordbank8 = []
-    var wordbank9 = []
-    var wordbank10 = []
-    var wordbank11 = []
-    var wordbank12 = []
     
-   // var rows = 11   ///////
- //   var columns = 10    ///////////
- //   var x = 0
+    //let string : String = "Hello 🐶🐮 🇩🇪"
+    //
+    //let characters = Array(string)
+    //
+    //println(characters)
+    //// [H, e, l, l, o,  , 🐶, 🐮,  , 🇩🇪]
+    //
+    //characters[0]
+    //characters[4]
+    //characters[6]
     
- //   var TempWord : String = ""
- //   var WordBank1 = "Buffalo"
-    
-    let letters: String = "ELIGHTNINGFERTNBUFFALOCKEABKELINBEFWLRBUOESUKSTREIIWGFOABSAROKEOSFLFEUINAVLKFNUNBFIFABCLHMONSTERAOUTHUNDERBIRD"
+   // var letters: String = "ELIGHTNINGFERTNBUFFALOCKEABKELINBEFWLRBUOESUKSTREIIWGFOABSAROKEOSFLFEUINAVLKFNUNBFIFABCLHMONSTERAOUTHUNDERBIRD"
+    //var letters: String = textView.text
     
     func SetArray(){
-        let myarray = Array(letters)
-
+        var myarray = Array(letters)
+var forthis = ""
+        rows = Rows.text.toInt()!
+        columns = Columns.text.toInt()!
+   //     WordBank1 = WordBank1.uppercaseString
+   //     var Word1 = Array(WordBank1)
+        
     
-        WordBank1 = WordBank1.uppercaseString
-        var Word1 = Array(WordBank1)
-    
-    
-    
-  //      var array2D = Array<Array<String>>()
         for col in 0..<rows {
             array2D.append(Array(count: columns, repeatedValue:""))
         }
-    
-    
-    
-    
+   
         for(var i=0; i<columns; i++){
             for(var y=rows-1; y>=0; y--){
                 array2D[y][i].append(myarray[myarray.count-1-x])
                 x++
             }
         }
+
+        
+        for(var i=0; i<rows; i++){
+            //for(var y=rows; y>=0; y--){
+            for(var y=0; y<columns; y++){
+               forthis += "\(array2D[i][y])\t"
+             //   println(array2D[y][i])
+            }
+            forthis += "\n\n"
+        }
+        
+            
+       textView.text = forthis
+     
     }
     
+    func textViewDidEndEditing(textView: UITextView){
+     // TODO
+    //    letters = textView.text
+    }
+    
+    func textFieldDidEndEditing(textField: UITextField) {
+        // TODO
+        
+        wordbank1 = WB1.text
+        wordbank2 = WB2.text
+        wordbank3 = WB3.text
+        wordbank4 = WB4.text
+        wordbank5 = WB5.text
+        wordbank6 = WB6.text
+        wordbank7 = WB7.text
+        wordbank8 = WB8.text
+        wordbank9 = WB9.text
+        wordbank10 = WB10.text
+        wordbank11 = WB11.text
+        wordbank12 = WB12.text
+
+        
+        var WordBank1 = Array(wordbank1)
+        var WordBank2 = Array(wordbank2)
+        var WordBank3 = Array(wordbank3)
+        var WordBank4 = Array(wordbank4)
+        var WordBank5 = Array(wordbank5)
+        var WordBank6 = Array(wordbank6)
+        var WordBank7 = Array(wordbank7)
+        var WordBank8 = Array(wordbank8)
+        var WordBank9 = Array(wordbank9)
+        var WordBank10 = Array(wordbank10)
+        var WordBank11 = Array(wordbank11)
+        var WordBank12 = Array(wordbank12)
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        SetArray()
+        let bank1 = WordSearch()
+        let bank2 = WordSearch()
+        let bank3 = WordSearch()
+        let bank4 = WordSearch()
+        let bank5 = WordSearch()
+        let bank6 = WordSearch()
+        let bank7 = WordSearch()
+        let bank8 = WordSearch()
+        let bank9 = WordSearch()
+        let bank10 = WordSearch()
+        let bank11 = WordSearch()
+        let bank12 = WordSearch()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -87,7 +178,7 @@ class ViewController: UIViewController, UITextViewDelegate, UINavigationControll
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        originalTopMargin = topMarginConstraint.constant
+   //     originalTopMargin = topMarginConstraint.constant
     }
     
     func moveViewUp() {
@@ -116,7 +207,7 @@ class ViewController: UIViewController, UITextViewDelegate, UINavigationControll
     @IBAction func takePhoto(sender: AnyObject) {
         // 1
         view.endEditing(true)
-        moveViewDown()
+     //   moveViewDown()
         
         // 2
         let imagePickerActionSheet = UIAlertController(title: "Snap/Upload Photo",
@@ -184,6 +275,11 @@ class ViewController: UIViewController, UITextViewDelegate, UINavigationControll
         textView.text = tesseract.recognizedText
         textView.editable = true
         
+        ///// ADDED //////
+       // letters = textView.text
+        SetArray()
+        ///// END ADDED////
+        
         // 8
         removeActivityIndicator()
     }
@@ -228,7 +324,7 @@ class ViewController: UIViewController, UITextViewDelegate, UINavigationControll
     
     @IBAction func backgroundTapped(sender: AnyObject) {
         view.endEditing(true)
-        moveViewDown()
+//        moveViewDown()
     }
     
     //MARK: - Assign Word Bank Lines To Arrays
@@ -260,16 +356,16 @@ class ViewController: UIViewController, UITextViewDelegate, UINavigationControll
 
 extension ViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(textField: UITextField) {
-        moveViewUp()
+//        moveViewUp()
     }
     
     @IBAction func textFieldEndEditing(sender: AnyObject) {
         view.endEditing(true)
-        moveViewDown()
+//        moveViewDown()
     }
     
     func textViewDidBeginEditing(textView: UITextView) {
-        moveViewDown()
+ //       moveViewDown()
     }
 }
 
