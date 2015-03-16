@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -38,6 +39,9 @@
                                         <include reference="B6L-yH-y84"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="textFieldEndEditing:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="iGB-ix-ShD"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Word Bank 2" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qx3-6O-TuT">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
@@ -60,6 +64,9 @@
                                         <include reference="RMm-oN-2QT"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="textFieldEndEditing:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="tPw-qE-cI3"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Word Bank 3" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qb2-Fg-glx">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
@@ -82,6 +89,9 @@
                                         <include reference="mVH-Bm-cE4"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="textFieldEndEditing:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="41C-PF-DE8"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Word Bank 4" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Hd-d2-WKM">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
@@ -104,6 +114,9 @@
                                         <include reference="c29-mA-1FD"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="textFieldEndEditing:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="NOb-Ur-B3S"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Word Bank 5" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x7k-ED-zXf">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
@@ -126,6 +139,9 @@
                                         <include reference="O1Q-pS-www"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="textFieldEndEditing:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="31D-aI-iw5"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Word Bank 6" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5jZ-eW-hRR">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
@@ -148,6 +164,9 @@
                                         <include reference="KxZ-M1-dyC"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="textFieldEndEditing:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="N1v-6R-8C1"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Word Bank 7" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S89-T9-4bh">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
@@ -170,6 +189,9 @@
                                         <include reference="ECb-he-B6m"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="textFieldEndEditing:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="eg0-f7-I35"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Word Bank 8" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EoR-0W-ypx">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
@@ -192,6 +214,9 @@
                                         <include reference="eI1-xw-VG6"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="textFieldEndEditing:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="UHZ-uO-1ai"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Word Bank 9" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SNG-bH-jhg">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
@@ -214,6 +239,9 @@
                                         <include reference="aVd-CL-MMM"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="textFieldEndEditing:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="AKe-lj-ZqV"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Word Bank 10" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1FI-eg-1bk">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
@@ -236,6 +264,9 @@
                                         <include reference="XlR-K3-w89"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="textFieldEndEditing:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="nh6-jp-gVu"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Word Bank 11" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nuk-Ev-17c">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
@@ -258,6 +289,9 @@
                                         <include reference="blu-On-fw1"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="textFieldEndEditing:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="LPj-RO-Wbv"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Word Bank 12" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yun-JU-EmD">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
@@ -280,6 +314,9 @@
                                         <include reference="p0O-OT-F3I"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="textFieldEndEditing:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="v4n-pJ-KbE"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="no. of ROWS" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fne-4F-08F">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
@@ -498,55 +535,55 @@
                                 <exclude reference="kG4-GG-LI3"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="mQZ-lW-9Ck"/>
-                                <exclude reference="xCi-sS-eBF"/>
-                                <exclude reference="al5-mX-2RH"/>
-                                <exclude reference="ihZ-SG-qA7"/>
-                                <exclude reference="DAp-hH-6Sv"/>
-                                <exclude reference="l0j-hE-P1O"/>
-                                <exclude reference="A6V-zw-PL8"/>
-                                <exclude reference="CLc-Bg-nLq"/>
-                                <exclude reference="fuD-Tg-sPk"/>
-                                <exclude reference="KNC-JF-k4C"/>
-                                <exclude reference="ZgX-dK-cMj"/>
-                                <exclude reference="1l9-ij-2dk"/>
-                                <exclude reference="Ebs-vg-Pci"/>
-                                <exclude reference="Tzs-Ty-BOc"/>
+                                <exclude reference="6BZ-sp-qaK"/>
+                                <exclude reference="PAn-oT-IUB"/>
+                                <exclude reference="os7-Xs-Nsh"/>
                                 <exclude reference="8WV-du-Zeq"/>
                                 <exclude reference="kxc-Kt-SF5"/>
-                                <exclude reference="1m7-0L-SEc"/>
-                                <exclude reference="DaA-VN-d9a"/>
-                                <exclude reference="tkd-Nx-bnv"/>
+                                <exclude reference="KNC-JF-k4C"/>
+                                <exclude reference="ZgX-dK-cMj"/>
+                                <exclude reference="a87-re-yEb"/>
+                                <exclude reference="vw6-Cf-H7F"/>
+                                <exclude reference="xsb-yN-XyS"/>
+                                <exclude reference="8ej-0G-ZBk"/>
+                                <exclude reference="DP9-yc-Sxx"/>
+                                <exclude reference="g08-xM-Hgj"/>
+                                <exclude reference="xlE-fL-mxO"/>
                                 <exclude reference="IpV-Sv-efr"/>
                                 <exclude reference="VkZ-b3-tqz"/>
                                 <exclude reference="WyS-sC-fQz"/>
                                 <exclude reference="Gau-EB-lNM"/>
                                 <exclude reference="dkK-da-qho"/>
                                 <exclude reference="hEH-hU-OWY"/>
-                                <exclude reference="8ej-0G-ZBk"/>
-                                <exclude reference="DP9-yc-Sxx"/>
-                                <exclude reference="g08-xM-Hgj"/>
-                                <exclude reference="xlE-fL-mxO"/>
-                                <exclude reference="a87-re-yEb"/>
-                                <exclude reference="vw6-Cf-H7F"/>
-                                <exclude reference="xsb-yN-XyS"/>
-                                <exclude reference="6BZ-sp-qaK"/>
-                                <exclude reference="PAn-oT-IUB"/>
-                                <exclude reference="os7-Xs-Nsh"/>
                                 <exclude reference="8kW-nD-OBg"/>
                                 <exclude reference="O6F-nP-2pl"/>
                                 <exclude reference="X5H-rY-6ym"/>
                                 <exclude reference="o5O-QH-amg"/>
+                                <exclude reference="A6V-zw-PL8"/>
+                                <exclude reference="CLc-Bg-nLq"/>
+                                <exclude reference="fuD-Tg-sPk"/>
+                                <exclude reference="DAp-hH-6Sv"/>
+                                <exclude reference="l0j-hE-P1O"/>
                                 <exclude reference="6d6-ep-r3x"/>
                                 <exclude reference="J63-lY-Bac"/>
                                 <exclude reference="hof-jh-5CQ"/>
                                 <exclude reference="l22-Sz-dWs"/>
+                                <exclude reference="1l9-ij-2dk"/>
+                                <exclude reference="Ebs-vg-Pci"/>
+                                <exclude reference="Tzs-Ty-BOc"/>
+                                <exclude reference="7Et-O2-QUv"/>
+                                <exclude reference="1m7-0L-SEc"/>
+                                <exclude reference="DaA-VN-d9a"/>
+                                <exclude reference="tkd-Nx-bnv"/>
                                 <exclude reference="AhI-0A-lLH"/>
                                 <exclude reference="O8X-gB-je0"/>
                                 <exclude reference="Otf-N6-wdv"/>
                                 <exclude reference="T8s-fO-KVy"/>
                                 <exclude reference="YrX-Uv-xyk"/>
-                                <exclude reference="7Et-O2-QUv"/>
+                                <exclude reference="al5-mX-2RH"/>
+                                <exclude reference="ihZ-SG-qA7"/>
+                                <exclude reference="mQZ-lW-9Ck"/>
+                                <exclude reference="xCi-sS-eBF"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -570,62 +607,62 @@
                                 <include reference="kG4-GG-LI3"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="mQZ-lW-9Ck"/>
-                                <include reference="xCi-sS-eBF"/>
-                                <include reference="al5-mX-2RH"/>
-                                <include reference="ihZ-SG-qA7"/>
-                                <include reference="DAp-hH-6Sv"/>
-                                <include reference="l0j-hE-P1O"/>
-                                <include reference="A6V-zw-PL8"/>
-                                <include reference="CLc-Bg-nLq"/>
-                                <exclude reference="fuD-Tg-sPk"/>
-                                <include reference="KNC-JF-k4C"/>
-                                <include reference="ZgX-dK-cMj"/>
-                                <include reference="1l9-ij-2dk"/>
-                                <include reference="Ebs-vg-Pci"/>
-                                <include reference="Tzs-Ty-BOc"/>
+                                <include reference="6BZ-sp-qaK"/>
+                                <include reference="PAn-oT-IUB"/>
+                                <exclude reference="os7-Xs-Nsh"/>
                                 <include reference="8WV-du-Zeq"/>
                                 <include reference="kxc-Kt-SF5"/>
-                                <include reference="1m7-0L-SEc"/>
-                                <include reference="DaA-VN-d9a"/>
-                                <include reference="tkd-Nx-bnv"/>
+                                <include reference="KNC-JF-k4C"/>
+                                <include reference="ZgX-dK-cMj"/>
+                                <include reference="a87-re-yEb"/>
+                                <include reference="vw6-Cf-H7F"/>
+                                <include reference="xsb-yN-XyS"/>
+                                <include reference="8ej-0G-ZBk"/>
+                                <include reference="DP9-yc-Sxx"/>
+                                <exclude reference="g08-xM-Hgj"/>
+                                <include reference="xlE-fL-mxO"/>
                                 <include reference="IpV-Sv-efr"/>
                                 <include reference="VkZ-b3-tqz"/>
                                 <include reference="WyS-sC-fQz"/>
                                 <include reference="Gau-EB-lNM"/>
                                 <exclude reference="dkK-da-qho"/>
                                 <include reference="hEH-hU-OWY"/>
-                                <include reference="8ej-0G-ZBk"/>
-                                <include reference="DP9-yc-Sxx"/>
-                                <exclude reference="g08-xM-Hgj"/>
-                                <include reference="xlE-fL-mxO"/>
-                                <include reference="a87-re-yEb"/>
-                                <include reference="vw6-Cf-H7F"/>
-                                <include reference="xsb-yN-XyS"/>
-                                <include reference="6BZ-sp-qaK"/>
-                                <include reference="PAn-oT-IUB"/>
-                                <exclude reference="os7-Xs-Nsh"/>
                                 <include reference="8kW-nD-OBg"/>
                                 <exclude reference="O6F-nP-2pl"/>
                                 <include reference="X5H-rY-6ym"/>
                                 <include reference="o5O-QH-amg"/>
+                                <include reference="A6V-zw-PL8"/>
+                                <include reference="CLc-Bg-nLq"/>
+                                <exclude reference="fuD-Tg-sPk"/>
+                                <include reference="DAp-hH-6Sv"/>
+                                <include reference="l0j-hE-P1O"/>
                                 <include reference="6d6-ep-r3x"/>
                                 <include reference="J63-lY-Bac"/>
                                 <exclude reference="hof-jh-5CQ"/>
                                 <include reference="l22-Sz-dWs"/>
+                                <include reference="1l9-ij-2dk"/>
+                                <include reference="Ebs-vg-Pci"/>
+                                <include reference="Tzs-Ty-BOc"/>
+                                <include reference="7Et-O2-QUv"/>
+                                <include reference="1m7-0L-SEc"/>
+                                <include reference="DaA-VN-d9a"/>
+                                <include reference="tkd-Nx-bnv"/>
                                 <include reference="AhI-0A-lLH"/>
                                 <include reference="O8X-gB-je0"/>
                                 <include reference="Otf-N6-wdv"/>
                                 <include reference="T8s-fO-KVy"/>
                                 <include reference="YrX-Uv-xyk"/>
-                                <include reference="7Et-O2-QUv"/>
+                                <include reference="al5-mX-2RH"/>
+                                <include reference="ihZ-SG-qA7"/>
+                                <include reference="mQZ-lW-9Ck"/>
+                                <include reference="xCi-sS-eBF"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="Columns" destination="5hY-3x-hi0" id="n99-sl-eOJ"/>
                         <outlet property="Rows" destination="fne-4F-08F" id="WWz-Ur-4UO"/>
-                        <outlet property="WB1" destination="esD-Mp-e5W" id="LLm-n2-EzD"/>
+                        <outlet property="WB1" destination="esD-Mp-e5W" id="Hlk-r1-DDB"/>
                         <outlet property="WB10" destination="1FI-eg-1bk" id="gpj-QH-4j5"/>
                         <outlet property="WB11" destination="nuk-Ev-17c" id="sEY-Q6-sMJ"/>
                         <outlet property="WB12" destination="yun-JU-EmD" id="f7H-9L-SZM"/>

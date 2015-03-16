@@ -10,10 +10,12 @@ import Foundation
 
 class WordSearch{
     
-    func FindWordLR(WordBank : String){
+    //HAVE ALL THESE RETURN AN INT DEPENDING ON isfound
+    func FindWordLR(WordBank : String) -> Int {
         var z = 0
+        var isfound : Bool = false
         if(WordBank != ""){
-            var isfound : Bool = false
+            //var isfound : Bool = false
             var TheWordBank = WordBank.uppercaseString
             var word2search = Array(TheWordBank)
             
@@ -50,11 +52,19 @@ class WordSearch{
             word2search.removeAll(keepCapacity: false)
             z = 0
             TempWord = ""
-        }}
-    func FindWordRL(WordBank : String){
+        }
+        if(isfound == true){
+            return 10
+        }
+        else{
+            return 1
+        }
+    }
+    func FindWordRL(WordBank : String) -> Int{
         var z = 0
+        var isfound : Bool = false
         if(WordBank != ""){
-            var isfound : Bool = false
+            //var isfound : Bool = false
             var TheWordBank = WordBank.uppercaseString
             var word2search = Array(TheWordBank)
             
@@ -92,11 +102,18 @@ class WordSearch{
             z = 0
             TempWord = ""
         }
+        if(isfound == true){
+            return 10
+        }
+        else{
+            return 2
+        }
     }
-    func FindWordTB(WordBank : String){
+    func FindWordTB(WordBank : String) -> Int{
         var z = 0
+        var isfound : Bool = false
         if(WordBank != ""){
-            var isfound : Bool = false
+            //var isfound : Bool = false
             var TheWordBank = WordBank.uppercaseString
             var word2search = Array(TheWordBank)
             
@@ -134,11 +151,18 @@ class WordSearch{
             z = 0
             TempWord = ""
         }
+        if(isfound == true){
+            return 10
+        }
+        else{
+            return 3
+        }
     }
-    func FindWordBT(WordBank : String){
+    func FindWordBT(WordBank : String) -> Int{
         var z = 0
+        var isfound : Bool = false
         if(WordBank != ""){
-            var isfound : Bool = false
+            //var isfound : Bool = false
             var TheWordBank = WordBank.uppercaseString
             var word2search = Array(TheWordBank)
             
@@ -176,16 +200,21 @@ class WordSearch{
             z = 0
             TempWord = ""
         }
-        
+        if(isfound == true){
+            return 10
+        }
+        else{
+            return 4
+        }
     }
-    func FindWordLRDiagUP(WordBank : String){
+    func FindWordLRDiagUP(WordBank : String) -> Int{
         var z = 0
         var Temp1 = 0
         var Temp2 = 0
         var stop = false
-        
+        var isfound : Bool = false
         if(WordBank != ""){
-            var isfound : Bool = false
+            //var isfound : Bool = false
             var TheWordBank = WordBank.uppercaseString
             var word2search = Array(TheWordBank)
             
@@ -265,16 +294,21 @@ class WordSearch{
             z = 0
             TempWord = ""
         }
-        
+        if(isfound == true){
+            return 10
+        }
+        else{
+            return 5
+        }
     }
-    func FindWordLRDiagDOWN(WordBank : String){
+    func FindWordLRDiagDOWN(WordBank : String) -> Int{
         var z = 0
         var Temp1 = 0
         var Temp2 = 0
         var stop = false
-        
+        var isfound : Bool = false
         if(WordBank != ""){
-            var isfound : Bool = false
+            //var isfound : Bool = false
             var TheWordBank = WordBank.uppercaseString
             var word2search = Array(TheWordBank)
             
@@ -353,15 +387,21 @@ class WordSearch{
             z = 0
             TempWord = ""
         }
+        if(isfound == true){
+            return 10
+        }
+        else{
+            return 7
+        }
     }
-    func FindWordRLDiagUP(WordBank : String){
+    func FindWordRLDiagUP(WordBank : String) -> Int{
         var z = 0
         var Temp1 = 0
         var Temp2 = 0
         var stop = false
-        
+        var isfound : Bool = false
         if(WordBank != ""){
-            var isfound : Bool = false
+            //var isfound : Bool = false
             var TheWordBank = WordBank.uppercaseString
             var word2search = Array(TheWordBank)
             
@@ -441,15 +481,21 @@ class WordSearch{
             z = 0
             TempWord = ""
         }
+        if(isfound == true){
+            return 10
+        }
+        else{
+            return 8
+        }
     }
-    func FindWordRLDiagDOWN(WordBank : String){
+    func FindWordRLDiagDOWN(WordBank : String) -> Int{
         var z = 0
         var Temp1 = 0
         var Temp2 = 0
         var stop = false
-        
+        var isfound : Bool = false
         if(WordBank != ""){
-            var isfound : Bool = false
+            //var isfound : Bool = false
             var TheWordBank = WordBank.uppercaseString
             var word2search = Array(TheWordBank)
             
@@ -528,6 +574,12 @@ class WordSearch{
             word2search.removeAll(keepCapacity: false)
             z = 0
             TempWord = ""
+        }
+        if(isfound == true){
+            return 10
+        }
+        else{
+            return 6
         }
     }
 }
