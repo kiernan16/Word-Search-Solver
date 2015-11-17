@@ -8,16 +8,21 @@
 
 import Foundation
 
+var array2D = Array<Array<String>>()
+var rows : Int = 1
+var columns : Int = 1
+//var x = 0
+var TempWord : String = ""
+
 class WordSearch{
-    
     //HAVE ALL THESE RETURN AN INT DEPENDING ON isfound
     func FindWordLR(WordBank : String) -> Int {
         var z = 0
         var isfound : Bool = false
         if(WordBank != ""){
             //var isfound : Bool = false
-            var TheWordBank = WordBank.uppercaseString
-            var word2search = Array(TheWordBank)
+            let TheWordBank = WordBank.uppercaseString
+            var word2search = Array(TheWordBank.characters)
             
             for(var x = 0; x < rows; x++){
                 for(var y = 0; ((y<columns)&&((TempWord != "") || !(y>columns-word2search.count))); y++){
@@ -28,7 +33,9 @@ class WordSearch{
                     else{
                         if(y>0){
                             if(array2D[x][y] == array2D[x][y-1]){
-                            }}
+                            }
+                           
+                        }
                         else{
                             TempWord = ""
                             z = 0
@@ -36,7 +43,7 @@ class WordSearch{
                     }
                     if (TempWord == TheWordBank)
                     {
-                        println("Found Word: \(TempWord)")
+                        print("Found Word: \(TempWord)")
                         x = 1000
                         y = 1000
                         z = 0
@@ -47,7 +54,7 @@ class WordSearch{
                 }
             }
             if(isfound == false){
-                println("\(WordBank.uppercaseString) could not be found")
+                print("\(WordBank.uppercaseString) could not be found")
             }
             word2search.removeAll(keepCapacity: false)
             z = 0
@@ -65,8 +72,8 @@ class WordSearch{
         var isfound : Bool = false
         if(WordBank != ""){
             //var isfound : Bool = false
-            var TheWordBank = WordBank.uppercaseString
-            var word2search = Array(TheWordBank)
+            let TheWordBank = WordBank.uppercaseString
+            var word2search = Array(TheWordBank.characters)
             
             for(var x = 0; x < rows; x++){
                 for(var y = 0; ((y<columns)&&((TempWord != "") || !(y>columns-word2search.count))); y++){
@@ -85,7 +92,7 @@ class WordSearch{
                     }
                     if (TempWord == TheWordBank)
                     {
-                        println("Found Word: \(TempWord)")
+                        print("Found Word: \(TempWord)")
                         x = 1000
                         y = 1000
                         z = 0
@@ -96,7 +103,7 @@ class WordSearch{
                 }
             }
             if(isfound == false){
-                println("\(WordBank.uppercaseString) could not be found")
+                print("\(WordBank.uppercaseString) could not be found")
             }
             word2search.removeAll(keepCapacity: false)
             z = 0
@@ -114,8 +121,8 @@ class WordSearch{
         var isfound : Bool = false
         if(WordBank != ""){
             //var isfound : Bool = false
-            var TheWordBank = WordBank.uppercaseString
-            var word2search = Array(TheWordBank)
+            let TheWordBank = WordBank.uppercaseString
+            var word2search = Array(TheWordBank.characters)
             
             for(var y = 0; y < columns; y++){
                 for(var x = 0; /*x < columns*/   ((x<rows)&&((TempWord != "") || !(x>rows-word2search.count))); x++){
@@ -134,7 +141,7 @@ class WordSearch{
                     }
                     if (TempWord == TheWordBank)
                     {
-                        println("Found Word: \(TempWord)")
+                        print("Found Word: \(TempWord)")
                         x = 1000
                         y = 1000
                         z = 0
@@ -145,7 +152,7 @@ class WordSearch{
                 }
             }
             if(isfound == false){
-                println("\(WordBank.uppercaseString) could not be found")
+                print("\(WordBank.uppercaseString) could not be found")
             }
             word2search.removeAll(keepCapacity: false)
             z = 0
@@ -163,8 +170,8 @@ class WordSearch{
         var isfound : Bool = false
         if(WordBank != ""){
             //var isfound : Bool = false
-            var TheWordBank = WordBank.uppercaseString
-            var word2search = Array(TheWordBank)
+            let TheWordBank = WordBank.uppercaseString
+            var word2search = Array(TheWordBank.characters)
             
             for(var y = 0; y < columns; y++){
                 for(var x = 0; /*x < columns*/   ((x<rows)&&((TempWord != "") || !(x>rows-word2search.count))); x++){
@@ -183,7 +190,7 @@ class WordSearch{
                     }
                     if (TempWord == TheWordBank)
                     {
-                        println("Found Word: \(TempWord)")
+                        print("Found Word: \(TempWord)")
                         x = 1000
                         y = 1000
                         z = 0
@@ -194,7 +201,7 @@ class WordSearch{
                 }
             }
             if(isfound == false){
-                println("\(WordBank.uppercaseString) could not be found")
+                print("\(WordBank.uppercaseString) could not be found")
             }
             word2search.removeAll(keepCapacity: false)
             z = 0
@@ -215,8 +222,8 @@ class WordSearch{
         var isfound : Bool = false
         if(WordBank != ""){
             //var isfound : Bool = false
-            var TheWordBank = WordBank.uppercaseString
-            var word2search = Array(TheWordBank)
+            let TheWordBank = WordBank.uppercaseString
+            var word2search = Array(TheWordBank.characters)
             
             for(var y = 0; y < columns; y++){
                 for(var x = rows-1; ((x >= word2search.count-1)&&(x<250)); x--){
@@ -232,7 +239,7 @@ class WordSearch{
                             stop = false
                             
                             if (TempWord == TheWordBank){
-                                println("Found Word: \(TempWord)")
+                                print("Found Word: \(TempWord)")
                                 x = 1000
                                 y = 1000
                                 z = 0
@@ -265,7 +272,7 @@ class WordSearch{
                                     }
                                     
                                     if (TempWord == TheWordBank){
-                                        println("Found Word: \(TempWord)")
+                                        print("Found Word: \(TempWord)")
                                         x = 1000
                                         y = 1000
                                         z = 0
@@ -288,7 +295,7 @@ class WordSearch{
             }
             
             if(isfound == false){
-                println("\(WordBank.uppercaseString) could not be found")
+                print("\(WordBank.uppercaseString) could not be found")
             }
             word2search.removeAll(keepCapacity: false)
             z = 0
@@ -309,8 +316,8 @@ class WordSearch{
         var isfound : Bool = false
         if(WordBank != ""){
             //var isfound : Bool = false
-            var TheWordBank = WordBank.uppercaseString
-            var word2search = Array(TheWordBank)
+            let TheWordBank = WordBank.uppercaseString
+            var word2search = Array(TheWordBank.characters)
             
             for(var y = 0; y < columns; y++){ //ADDED
                 //   for(var x = 1; x < columns; x++){
@@ -325,7 +332,7 @@ class WordSearch{
                             stop = false
                             
                             if (TempWord == TheWordBank){
-                                println("Found Word: \(TempWord)")
+                                print("Found Word: \(TempWord)")
                                 x = 1000
                                 y = 1000
                                 z = 0
@@ -358,7 +365,7 @@ class WordSearch{
                                     }
                                     
                                     if (TempWord == TheWordBank){
-                                        println("Found Word: \(TempWord)")
+                                        print("Found Word: \(TempWord)")
                                         x = 1000
                                         y = 1000
                                         z = 0
@@ -381,7 +388,7 @@ class WordSearch{
             }
             
             if(isfound == false){
-                println("\(WordBank.uppercaseString) could not be found")
+                print("\(WordBank.uppercaseString) could not be found")
             }
             word2search.removeAll(keepCapacity: false)
             z = 0
@@ -402,8 +409,8 @@ class WordSearch{
         var isfound : Bool = false
         if(WordBank != ""){
             //var isfound : Bool = false
-            var TheWordBank = WordBank.uppercaseString
-            var word2search = Array(TheWordBank)
+            let TheWordBank = WordBank.uppercaseString
+            var word2search = Array(TheWordBank.characters)
             
             for(var y = 0; y < columns; y++){ //ADDED
                 //   for(var x = 1; x < columns; x++){
@@ -418,7 +425,7 @@ class WordSearch{
                             stop = false
                             
                             if (TempWord == TheWordBank){
-                                println("Found Word: \(TempWord)")
+                                print("Found Word: \(TempWord)")
                                 x = 1000
                                 y = 1000
                                 z = 0
@@ -452,7 +459,7 @@ class WordSearch{
                                     }
                                     
                                     if (TempWord == TheWordBank){
-                                        println("Found Word: \(TempWord)")
+                                        print("Found Word: \(TempWord)")
                                         x = 1000
                                         y = 1000
                                         z = 0
@@ -475,7 +482,7 @@ class WordSearch{
             }
             
             if(isfound == false){
-                println("\(WordBank.uppercaseString) could not be found")
+                print("\(WordBank.uppercaseString) could not be found")
             }
             word2search.removeAll(keepCapacity: false)
             z = 0
@@ -496,8 +503,8 @@ class WordSearch{
         var isfound : Bool = false
         if(WordBank != ""){
             //var isfound : Bool = false
-            var TheWordBank = WordBank.uppercaseString
-            var word2search = Array(TheWordBank)
+            let TheWordBank = WordBank.uppercaseString
+            var word2search = Array(TheWordBank.characters)
             
             for(var y = 0; y < columns; y++){ //ADDED
                 //   for(var x = 1; x < columns; x++){
@@ -512,7 +519,7 @@ class WordSearch{
                             stop = false
                             
                             if (TempWord == TheWordBank){
-                                println("Found Word: \(TempWord)")
+                                print("Found Word: \(TempWord)")
                                 x = 1000
                                 y = 1000
                                 z = 0
@@ -546,7 +553,7 @@ class WordSearch{
                                     }
                                     
                                     if (TempWord == TheWordBank){
-                                        println("Found Word: \(TempWord)")
+                                        print("Found Word: \(TempWord)")
                                         x = 1000
                                         y = 1000
                                         z = 0
@@ -569,7 +576,7 @@ class WordSearch{
             }
             
             if(isfound == false){
-                println("\(WordBank.uppercaseString) could not be found")
+                print("\(WordBank.uppercaseString) could not be found")
             }
             word2search.removeAll(keepCapacity: false)
             z = 0

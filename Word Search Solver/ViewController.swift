@@ -9,11 +9,11 @@
 import UIKit
 import Foundation
 
-var rows : Int = 1
-var columns : Int = 1
+//var rows : Int = 1
+//var columns : Int = 1
 var x = 0
-var TempWord : String = ""
-var wordbank1 = "ded"
+//var TempWord : String = ""
+var wordbank1 = ""
 var wordbank2 = ""
 var wordbank3 = ""
 var wordbank4 = ""
@@ -55,9 +55,9 @@ var bank12 = WordSearch()
 //var letters = ""
 var letters: String = "ELIGHTNINGFERTNBUFFALOCKEABKELINBEFWLRBUOESUKSTREIIWGFOABSAROKEOSFLFEUINAVLKFNUNBFIFABCLHMONSTERAOUTHUNDERBIRD"
 
-var array2D = Array<Array<String>>()
+//var array2D = Array<Array<String>>()
 
-class ViewController: UIViewController, UITextViewDelegate, /*UITextFieldDelegate,*/ UINavigationControllerDelegate {
+class ViewController: UIViewController, UITextViewDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var topMarginConstraint: NSLayoutConstraint!
     @IBOutlet weak var Rows: UITextField!
@@ -78,7 +78,6 @@ class ViewController: UIViewController, UITextViewDelegate, /*UITextFieldDelegat
     var activityIndicator:UIActivityIndicatorView!
     var originalTopMargin:CGFloat!
     
-    
     //let string : String = "Hello 🐶🐮 🇩🇪"
     //
     //let characters = Array(string)
@@ -94,13 +93,10 @@ class ViewController: UIViewController, UITextViewDelegate, /*UITextFieldDelegat
     //var letters: String = textView.text
     
     func SetArray(){
-        var myarray = Array(letters)
-var forthis = ""
-        rows = Rows.text.toInt()!
-        columns = Columns.text.toInt()!
-   //     WordBank1 = WordBank1.uppercaseString
-   //     var Word1 = Array(WordBank1)
-        
+        var myarray = Array(letters.characters)
+        var forthis = ""
+        rows = Int(Rows.text!)!
+        columns = Int(Columns.text!)!
     
         for col in 0..<rows {
             array2D.append(Array(count: columns, repeatedValue:""))
@@ -115,17 +111,14 @@ var forthis = ""
 
         
         for(var i=0; i<rows; i++){
-            //for(var y=rows; y>=0; y--){
             for(var y=0; y<columns; y++){
                forthis += "\(array2D[i][y])\t"
-             //   println(array2D[y][i])
             }
             forthis += "\n\n"
         }
         
-            
        textView.text = forthis
-     
+        
     }
     
     func textViewDidEndEditing(textView: UITextView){
@@ -191,7 +184,6 @@ var forthis = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
         
     }
 
@@ -368,6 +360,15 @@ var forthis = ""
     
     
     
+    @IBAction func DoTheText(sender: AnyObject) {
+        let range = textView.selectedRange
+       let string = NSMutableAttributedString(attributedString: textView.attributedText)
+        let attributes = [NSForegroundColorAttributeName: UIColor.greenColor()]
+        
+        string.addAttributes(attributes, range: textView.selectedRange)
+        textView.attributedText = string
+        textView.selectedRange = range
+    }
    
 
 }
@@ -380,32 +381,32 @@ extension ViewController: UITextFieldDelegate {
     @IBAction func textFieldEndEditing(sender: AnyObject) {
         view.endEditing(true)
 //        moveViewDown()
-        wordbank1 = WB1.text
-        wordbank2 = WB2.text
-        wordbank3 = WB3.text
-        wordbank4 = WB4.text
-        wordbank5 = WB5.text
-        wordbank6 = WB6.text
-        wordbank7 = WB7.text
-        wordbank8 = WB8.text
-        wordbank9 = WB9.text
-        wordbank10 = WB10.text
-        wordbank11 = WB11.text
-        wordbank12 = WB12.text
+        wordbank1 = WB1.text!
+        wordbank2 = WB2.text!
+        wordbank3 = WB3.text!
+        wordbank4 = WB4.text!
+        wordbank5 = WB5.text!
+        wordbank6 = WB6.text!
+        wordbank7 = WB7.text!
+        wordbank8 = WB8.text!
+        wordbank9 = WB9.text!
+        wordbank10 = WB10.text!
+        wordbank11 = WB11.text!
+        wordbank12 = WB12.text!
         
-        
-        var WordBank1 = Array(wordbank1)
-        var WordBank2 = Array(wordbank2)
-        var WordBank3 = Array(wordbank3)
-        var WordBank4 = Array(wordbank4)
-        var WordBank5 = Array(wordbank5)
-        var WordBank6 = Array(wordbank6)
-        var WordBank7 = Array(wordbank7)
-        var WordBank8 = Array(wordbank8)
-        var WordBank9 = Array(wordbank9)
-        var WordBank10 = Array(wordbank10)
-        var WordBank11 = Array(wordbank11)
-        var WordBank12 = Array(wordbank12)
+        // MARK: - CHECK TO SEE IF THIS IS NECESSARY
+        var WordBank1 = Array(wordbank1.characters)
+        var WordBank2 = Array(wordbank2.characters)
+        var WordBank3 = Array(wordbank3.characters)
+        var WordBank4 = Array(wordbank4.characters)
+        var WordBank5 = Array(wordbank5.characters)
+        var WordBank6 = Array(wordbank6.characters)
+        var WordBank7 = Array(wordbank7.characters)
+        var WordBank8 = Array(wordbank8.characters)
+        var WordBank9 = Array(wordbank9.characters)
+        var WordBank10 = Array(wordbank10.characters)
+        var WordBank11 = Array(wordbank11.characters)
+        var WordBank12 = Array(wordbank12.characters)
         
         //MAKE SWITCH STATEMENT
         
@@ -456,7 +457,7 @@ extension ViewController: UITextFieldDelegate {
     
     func FindTheWord(textField: UITextField, wordbank: String, isfound: Bool, bank: WordSearch) -> Bool{
         var y = 0
-        var thiswordbank = wordbank
+        let thiswordbank = wordbank
         var thisisfound = isfound
         var thisbank = bank
         
@@ -556,11 +557,6 @@ extension ViewController: UITextFieldDelegate {
 
 }
 
-func FindIt(number:Int){
-   
-    
-    
-}
 
 //func FindTheWord(textField: UITextField){
 //    var y = 0
@@ -656,8 +652,8 @@ func FindIt(number:Int){
 extension ViewController: UIImagePickerControllerDelegate {
     
     func imagePickerController(picker: UIImagePickerController,
-        didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
-            let selectedPhoto = info[UIImagePickerControllerOriginalImage] as UIImage
+        didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+            let selectedPhoto = info[UIImagePickerControllerOriginalImage] as! UIImage
             let scaledImage = scaleImage(selectedPhoto, maxDimension: 800)
             
             addActivityIndicator()

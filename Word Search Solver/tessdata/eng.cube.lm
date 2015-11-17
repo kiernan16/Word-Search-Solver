@@ -1,0 +1,9 @@
+//LeadPunc="({[`'
+//TrailPunc=}:;-]!?`,.)"'
+//NumLeadPunc=#({[@$
+//NumTrailPunc=}):;].,%
+//Operators=*+-/.:,()[]
+//Digits=0123456789
+//Alphas=abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
+
+Alphas=ABCDEFGHIJKLMNOPQRSTUVWXYZ
